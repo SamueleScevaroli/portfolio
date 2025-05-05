@@ -1,0 +1,43 @@
+<div class="navbar bg-base-200 shadow-sm">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <div role="button" class="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a routerLink="/about">{{ 'ABOUT' | translate }}</a></li>
+        <li><a routerLink="/projects">{{ 'PROJECTS' | translate }}</a></li>
+        <li><a routerLink="/cv">{{ 'CV' | translate }}</a></li>
+      </ul>
+    </div>
+    <a class="btn btn-ghost text-xl" routerLink="/home">Portfolio</a>
+  </div>
+  <div class="navbar-end">
+    <ul class="menu menu-horizontal pe-5">
+      <li class="pe-5"><a routerLink="/about">{{ 'ABOUT' | translate }}</a></li>
+      <li class="pe-5"><a routerLink="/projects">{{ 'PROJECTS' | translate }}</a></li>
+      <li class="pe-5"><a routerLink="/cv">{{ 'CV' | translate }}</a></li>
+    </ul>
+    <label class="swap swap-rotate pe-5">
+      <input type="checkbox" class="theme-controller" [checked]="this.currentTheme() === 'cupcake'" (change)="toggleTheme($event)"/>
+
+      <fa-icon [icon]="['fas', 'sun']" class="swap-off"></fa-icon>
+
+      <fa-icon [icon]="['fas', 'moon']" class="swap-on"></fa-icon>
+    </label>
+
+    <label class="swap swap-indeterminate pe-4">
+      <input type="checkbox" [checked]="this.currentLang() === 'en'" (change)="toggleLanguage()"/>
+
+      <div class="swap-off w-8 rounded-full overflow-hidden">
+        <img [src]="flagUrl()" alt="Italiano"  class="w-full h-full object-cover"/>
+      </div>
+
+      <div class="swap-on w-8 rounded-full overflow-hidden">
+        <img [src]="flagUrl()" alt="English"  class="w-full h-full object-cover"/>
+      </div>
+    </label>
+
+  </div>
+</div>
+
