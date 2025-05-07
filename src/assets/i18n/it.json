@@ -2,6 +2,82 @@
   "ABOUT": "Chi sono",
   "PROJECTS": "Progetti",
   "CV": "CV",
-  "PORTFOLIO": "Portfolio"
+  "PORTFOLIO": "Portfolio",
+  "hero": {
+    "hello": "Ciao, il mio nome é",
+    "name": "Samuele Scevaroli",
+    "introduction": "I build things for the web",
+    "description": "I'm a full stack developer, specialized in building and designing exceptional applications with Spring boot and Angular.",
+    "button": "Check out my projects"
+  },
+  "cv": {
+    "education": {
+      "title": "Educazione",
+      "bachelor": {
+        "title": "Matematica Applicata - Modellistico e Computazionale",
+        "university": "Universitá di Verona",
+        "thesis": {
+          "title": "Curve ellittiche in crittografia",
+          "supervisor": "Prof. Francesca Mantese"
+        }
+      },
+      "master": {
+        "title": "Cryptography - Stage oriented",
+        "university": "Universitá di Trento",
+        "thesis": {
+          "title": "An overview of isogeny-based cryptography: broken and unbroken protocols",
+          "supervisor": "Prof. Nadir Murru",
+          "cosupervisor": "Dr. Marzio Mula"
+        }
+      }
+    }
+  },
+  "work": {
+    "intern": {
+      "title": "Tirocinio",
+      "company": "PPI Italia s.r.l",
+      "period": "06/2022 - 11/2022",
+      "address": "Viale Famagosta, 75 - 20142 Milano (MI)",
+      "position": "Tirocinante",
+      "description": "B4T – Un'applicazione web per la gestione delle spese dei dipendenti e la generazione di report per il libro paga.",
+      "responsibility": {
+        "first": "Progettazione e sviluppo dei flussi di approvazione delle spese",
+        "second": "Abilitazione della generazione di report in PDF ed estrazione delle buste paga per l'HR",
+        "third": "Sviluppo del backend utilizzando Spring Boot (architettura MVC con template Thymeleaf)",
+        "fourth": "Sviluppo del frontend utilizzando HTML, CSS e Javascript"
+      }
+    },
+    "ppi": {
+      "title": "PPI",
+      "company": "PPI Italia s.r.l",
+      "period": "04/2023 - 05/2024",
+      "address": "Viale Famagosta, 75 - 20142 Milano (MI)",
+      "position": "Analista Programmatore",
+      "description": "Sviluppo di una piattaforma per lo scambio di dati assicurativi, basata su una DLT privata (Corda).",
+      "responsibility": {
+        "first": "Sviluppo di un NMS (Network Mapping Service) per la gestione dei nodi Corda",
+        "second": "Deployment dell'intera rete Corda su un cluster Kubernetes utilizzando Helm Charts",
+        "third": "Realizzazione di un servizio di migrazione per trasferire dati da un database legacy immutabile ai vault di Corda",
+        "fourth": "Manutenzione della piattaforma: correzione bug, implementazione nuove funzionalità",
+        "fifth": "Integrazione di un CMS utilizzando Strapi",
+        "sixth": "Sviluppo di test unitari e di integrazione per applicazioni Spring Boot e Angular",
+        "seventh": "Integrazione di notifiche web/email utilizzando OneSignal"
+      }
+    },
+    "ibm": {
+      "title": "IBM",
+      "company": "IBM CIC s.r.l",
+      "period": "04/2023 - 05/2024",
+      "address": "Viale San Bovio, 3 - 20054 Segrate (MI)",
+      "position": "Practitioner - Application Developer-Cloud Fullstack",
+      "description": "Refactoring e sviluppo funzionalità per la piattaforma CMO (Commissione Medico Ospedaliera), in collaborazione con il Ministero della Difesa.",
+      "responsibility": {
+        "first": "Allineamento dell'ambiente locale con il database e l'infrastruttura di produzione",
+        "second": "Analisi funzionale e progettuale per lo sviluppo di nuove funzionalità",
+        "third": "Implementazione di nuove funzionalità utilizzando Java 8, Spring e AngularJS",
+        "fourth": "Manutenzione e gestione dell'applicazione"
+      }
+    }
+  }
 }
 

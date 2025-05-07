@@ -1,9 +1,17 @@
-<div class="flex flex-col min-h-screen">
+<div class="flex flex-col h-screen bg-base-100">
   <app-navbar></app-navbar>
-  <div class="container mx-auto py-7 grow h-full bg-base-200">
-    <div class="mx-5">
-      <router-outlet></router-outlet>
+
+  <div class="flex flex-grow overflow-hidden">
+    <div class="w-24 shrink-0 flex flex-col justify-end p-4">
+      <ul class="menu rounded-box">
+        <li><a><fa-icon [icon]="['fab', 'github']" class="social-icon"></fa-icon></a></li>
+        <li><a><fa-icon [icon]="['fab', 'linkedin']" class="social-icon"></fa-icon></a></li>
+        <li><a><fa-icon [icon]="['fas', 'envelope']" class="social-icon"></fa-icon></a></li>
+      </ul>
+    </div>
+
+    <div class="flex-grow">
+        <router-outlet></router-outlet>
     </div>
   </div>
-  <app-footer></app-footer>
 </div>

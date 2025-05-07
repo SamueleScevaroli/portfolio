@@ -1,3 +1,54 @@
-<section class="p-10 bg-base-100" id="cv">
-  <p>CV</p>
-</section>
+<div class="flex justify-center py-20">
+  <div class="flex w-2/3">
+    <div class="w-1/3 p-4 flex flex-col">
+      <a (click)="scrollToSection('section1')"
+         [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section1')}"
+         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
+        {{ 'cv.education.title' | translate }}
+      </a>
+
+      <a (click)="scrollToSection('section2')"
+         [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section2')}"
+         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
+        {{ 'work.intern.title' | translate }}
+      </a>
+
+      <a (click)="scrollToSection('section3')"
+         [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section3')}"
+         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
+        {{ 'work.ppi.title' | translate }}
+      </a>
+
+      <a (click)="scrollToSection('section4')"
+         [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section4')}"
+         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
+        {{ 'work.ibm.title' | translate }}
+      </a>
+    </div>
+
+    <div class="w-2/3 overflow-y-hidden p-6">
+      <section #section1 id="section1" class="min-h-full scroll-mt-10">
+        <h2 class="text-3xl font-bold mb-4">{{ 'cv.education.title' | translate }}</h2>
+        <p>Contenuto esperienza...</p>
+      </section>
+
+      <section #section2 id="section2" class="min-h-full scroll-mt-10">
+        <h2 class="text-3xl font-bold mb-4">{{ 'work.intern.title' | translate }}</h2>
+        <p>Contenuto skills...</p>
+      </section>
+
+      <section #section3 id="section3" class="min-h-full scroll-mt-10">
+        <h2 class="text-3xl font-bold mb-4">{{ 'work.ppi.title' | translate }}</h2>
+        <p>Contenuto formazione...</p>
+      </section>
+
+      <section #section4 id="section4" class="min-h-full scroll-mt-10">
+        <h2 class="text-3xl font-bold mb-4">{{ 'work.ibm.title' | translate }}</h2>
+        <p>Contenuto formazione...</p>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+

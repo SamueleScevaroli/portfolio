@@ -1,5 +1,5 @@
-import {Component, inject, OnInit, Renderer2, signal} from '@angular/core';
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import {Component, inject, OnInit, signal} from '@angular/core';
+import {RouterLink} from "@angular/router";
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {TranslatePipe, TranslateService} from "@ngx-translate/core";
 

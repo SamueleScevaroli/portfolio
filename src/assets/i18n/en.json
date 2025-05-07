@@ -2,5 +2,81 @@
   "ABOUT": "About",
   "PROJECTS": "Projects",
   "CV": "CV",
-  "PORTFOLIO": "Portfolio"
+  "PORTFOLIO": "Portfolio",
+  "hero": {
+    "hello": "Hi, my name is",
+    "name": "Samuele Scevaroli",
+    "introduction": "I build things for the web",
+    "description": "I'm a full stack developer, specialized in building and designing exceptional applications with Spring boot and Angular.",
+    "button": "Check out my projects"
+  },
+  "cv": {
+    "education": {
+      "title": "Education",
+      "bachelor": {
+        "title": "Applied Math - Modelling and Computational",
+        "university": "University of Verona",
+        "thesis": {
+          "title": "Elliptic curves in cryptography",
+          "supervisor": "Prof. Francesca Mantese"
+        }
+      },
+      "master": {
+        "title": "Cryptography - Stage oriented",
+        "university": "University of Trento",
+        "thesis": {
+          "title": "An overview of isogeny-based cryptography: broken and unbroken protocols",
+          "supervisor": "Prof. Nadir Murru",
+          "cosupervisor": "Dr. Marzio Mula"
+        }
+      }
+    }
+  },
+  "work": {
+    "intern": {
+      "title": "Internship",
+      "company": "PPI Italia s.r.l",
+      "period": "06/2022 - 11/2022",
+      "address": "Viale Famagosta, 75 - 20142 Milano (MI)",
+      "position": "Intern",
+      "description": "B4T – A web application for managing employee expenses and generating payroll reports.",
+      "responsibility": {
+        "first": "Designed and developed expense approval workflows",
+        "second": "Enabled PDF report generation and payroll extraction for HR use",
+        "third": "Built the backend using Spring Boot (MVC architecture with Thymeleaf templates)",
+        "fourth": "Developed the frontend using HTML, CSS, and Javascript"
+      }
+    },
+    "ppi": {
+      "title": "PPI",
+      "company": "PPI Italia s.r.l",
+      "period": "04/2023 - 05/2024",
+      "address": "Viale Famagosta, 75 - 20142 Milano (MI)",
+      "position": "Programmer Analyst",
+      "description": "Development of a platform for insurance data exchange, powered by a private DLT (Corda).",
+      "responsibility": {
+        "first": "Developed an NMS (Network Mapping Service) to manage Corda nodes",
+        "second": "Deployed the full Corda network to a Kubernetes cluster using Helm Charts",
+        "third": "Built a migration service to move data from an immutable legacy database to Corda vault storages",
+        "fourth": "Maintained the platform: fixed bugs, implemented new features",
+        "fifth": "Integrated a CMS using Strapi",
+        "sixth": "Developed unit and integration tests for Spring Boot and Angular applications",
+        "seventh": "Integrated web/email notifications using OneSignal"
+      }
+    },
+    "ibm": {
+      "title": "IBM",
+      "company": "IBM CIC s.r.l",
+      "period": "04/2023 - 05/2024",
+      "address": "Viale San Bovio, 3 - 20054 Segrate (MI)",
+      "position": "Practitioner - Application Developer-Cloud Fullstack",
+      "description": "Refactoring and feature development for the CMO (Commissione Medico Ospedaliera) platform, in collaboration with the Italian Ministry of Defense.",
+      "responsibility": {
+        "first": "Aligned local environment with the production database and infrastructure",
+        "second": "Conducted functional and design analysis for new feature development",
+        "third": "Implemented new features using Java 8, Spring, and AngularJS",
+        "fourth": "Maintenance and management of the application"
+      }
+    }
+  }
 }
