@@ -1,17 +1,79 @@
-<div class="flex flex-col h-screen bg-base-100">
-  <app-navbar></app-navbar>
+<div class="flex flex-col h-screen overflow-hidden bg-base-100">
+  <!-- Navbar -->
+  <div class="navbar sticky top-0 z-10">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" class="btn btn-ghost swap swap-rotate lg:hidden">
+          <input type="checkbox" />
+          <fa-icon [icon]="['fas', 'bars']" class="swap-off"></fa-icon>
+          <fa-icon [icon]="['fas', 'close']" class="swap-on"></fa-icon>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52">
+          <li><a (click)="scrollToSection('aboutSection')"><span class="font-mono text-primary">01.</span>{{ 'about.section.title' | translate }}</a></li>
+          <li><a (click)="scrollToSection('projectsSection')"><span class="font-mono text-primary">02.</span>{{ 'projects.section.title' | translate }}</a></li>
+          <li><a (click)="scrollToSection('cvSection')"><span class="font-mono text-primary">03.</span>{{ 'cv.section.title' | translate }}</a></li>
+          <li><a (click)="scrollToSection('templatesSection')"><span class="font-mono text-primary">04.</span>{{ 'templates.section.title' | translate }}</a></li>
+        </ul>
+      </div>
+      <a class="ps-4 text-xl" (click)="scrollToSection('homeSection')">Portfolio</a>
+    </div>
 
-  <div class="flex flex-grow overflow-hidden">
-    <div class="w-24 shrink-0 flex flex-col justify-end p-4">
-      <ul class="menu rounded-box">
-        <li><a><fa-icon [icon]="['fab', 'github']" class="social-icon"></fa-icon></a></li>
-        <li><a><fa-icon [icon]="['fab', 'linkedin']" class="social-icon"></fa-icon></a></li>
-        <li><a><fa-icon [icon]="['fas', 'envelope']" class="social-icon"></fa-icon></a></li>
+    <div class="navbar-end">
+      <ul class="menu menu-horizontal pe-5 hidden lg:flex">
+        <li class="pe-5"><a (click)="scrollToSection('aboutSection')"><span class="font-mono text-primary">01.</span>{{ 'about.section.title' | translate }}</a></li>
+        <li class="pe-5"><a (click)="scrollToSection('projectsSection')"><span class="font-mono text-primary">02.</span>{{ 'projects.section.title' | translate }}</a></li>
+        <li class="pe-5"><a (click)="scrollToSection('cvSection')"><span class="font-mono text-primary">03.</span>{{ 'cv.section.title' | translate }}</a></li>
+        <li class="pe-5"><a (click)="scrollToSection('templatesSection')"><span class="font-mono text-primary">04.</span>{{ 'templates.section.title' | translate }}</a></li>
+      </ul>
+      <label class="swap swap-rotate pe-5">
+        <input type="checkbox" class="theme-controller" [checked]="currentTheme() === 'cupcake'" (change)="toggleTheme($event)" />
+        <fa-icon [icon]="['fas', 'sun']" class="swap-off"></fa-icon>
+        <fa-icon [icon]="['fas', 'moon']" class="swap-on"></fa-icon>
+      </label>
+      <label class="swap swap-indeterminate pe-4">
+        <input type="checkbox" [checked]="currentLang() === 'en'" (change)="toggleLanguage()" />
+        <div class="swap-off w-8 rounded-full overflow-hidden">
+          <img [src]="flagUrl()" alt="Italiano" class="w-full h-full object-cover" />
+        </div>
+        <div class="swap-on w-8 rounded-full overflow-hidden">
+          <img [src]="flagUrl()" alt="English" class="w-full h-full object-cover" />
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="flex flex-grow">
+    <!-- Left social -->
+    <div class="w-20 shrink-0 p-4 sticky top-16 h-[calc(100vh-4rem)] flex flex-col justify-end">
+
+    <ul class="menu rounded-box">
+        <li><a class="tooltip tooltip-right" data-tip="Github" href="https://github.com/SamueleScevaroli" target="_blank" rel="noopener noreferrer">
+          <fa-icon [icon]="['fab', 'github']" class="social-icon"></fa-icon>
+        </a></li>
+        <li><a class="tooltip tooltip-right" data-tip="LinkedIn" href="https://www.linkedin.com/in/samuele-scevaroli-847a911b9" target="_blank" rel="noopener noreferrer">
+          <fa-icon [icon]="['fab', 'linkedin']" class="social-icon"></fa-icon>
+        </a></li>
+        <li><a class="tooltip tooltip-right" data-tip="Click to send me Email!" href="mailto:samusceva@gmail.com">
+          <fa-icon [icon]="['fas', 'envelope']" class="social-icon"></fa-icon>
+        </a></li>
       </ul>
     </div>
 
-    <div class="flex-grow">
-        <router-outlet></router-outlet>
+    <!-- Sections -->
+    <div class="flex-grow h-[calc(100vh-4rem)] overflow-y-auto scrollbar-hide">
+      <section #homeSection id="homeSection" class="h-screen"><app-home></app-home></section>
+      <section #aboutSection id="aboutSection" class="h-screen"><app-about></app-about></section>
+      <section #cvSection id="cvSection" class="h-screen"><app-cv></app-cv></section>
+      <section #projectsSection id="projectsSection" class="h-screen"><app-projects></app-projects></section>
+      <section #templatesSection id="templatesSection" class="h-screen"><app-templates></app-templates></section>
+    </div>
+
+    <!-- Right email -->
+    <div class="w-20 shrink-0 p-6 sticky top-16 h-[calc(100vh-4rem)] flex flex-col justify-end">
+      <span class="font-mono tracking-widest" style="writing-mode: vertical-rl; transform: rotate(360deg);">
+        samusceva&#64;gmail.com
+      </span>
     </div>
   </div>
 </div>

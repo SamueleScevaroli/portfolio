@@ -1,0 +1,26 @@
+<div class="card bg-neutral/70 shadow-sm">
+  <div class="card-body">
+    <div class="flex justify-between text-lg">
+      <a class="cursor-pointer text-2xl">
+        <fa-icon [icon]="['far', 'folder']" class="social-icon"></fa-icon>
+      </a>
+      <div class="flex gap-4">
+        <a class="cursor-pointer tooltip tooltip-accent" data-tip="Github" href="https://github.com/SamueleScevaroli" target="_blank" rel="noopener noreferrer">
+          <fa-icon [icon]="['fab', 'github']" class="social-icon"></fa-icon>
+        </a>
+        <a class="cursor-pointer tooltip tooltip-accent" data-tip="Expand">
+          <fa-icon [icon]="['fas', 'expand']" class="social-icon"></fa-icon>
+        </a>
+      </div>
+    </div>
+
+    <h2 class="card-title">{{ title() }}</h2>
+    <p class="mb-3">{{ description() }}</p>
+
+    <div class="card-actions">
+      @for (badge of badges(); track badge) {
+        <div class="badge badge-ghost">{{ badge }}</div>
+      }
+    </div>
+  </div>
+</div>

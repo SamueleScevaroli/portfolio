@@ -1,6 +1,16 @@
-<div class="flex justify-center py-20">
-  <div class="flex w-2/3">
-    <div class="w-1/3 p-4 flex flex-col">
+<div class="flex flex-col items-center py-20">
+  <div class="flex flex-grow font-bold text-left items-center w-2/3 pl-6">
+    <span class="font-mono text-primary mr-5">03.</span>
+    <span class="text-xl"> {{ 'cv.section.title' | translate }}</span>
+    <div class="divider divider-secondary opacity-60 w-full px-5"></div>
+    <div class="tooltip" [attr.data-tip]="'cv.section.download.en' | translate">
+      <a href="assets/cv/cv_en.pdf" download><button class="btn btn-primary">
+        <fa-icon [icon]="['fas', 'download']"></fa-icon>
+      </button></a>
+    </div>
+  </div>
+  <div class="flex w-2/3 h-[60vh] overflow-y-auto p-6">
+    <div class="w-1/4 p-4 flex flex-col">
       <a (click)="scrollToSection('section1')"
          [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section1')}"
          class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
@@ -10,41 +20,103 @@
       <a (click)="scrollToSection('section2')"
          [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section2')}"
          class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
-        {{ 'work.intern.title' | translate }}
+        {{ 'cv.work.intern.title' | translate }}
       </a>
 
       <a (click)="scrollToSection('section3')"
          [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section3')}"
          class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
-        {{ 'work.ppi.title' | translate }}
+        {{ 'cv.work.ppi.title' | translate }}
       </a>
 
       <a (click)="scrollToSection('section4')"
          [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section4')}"
          class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
-        {{ 'work.ibm.title' | translate }}
+        {{ 'cv.work.ibm.title' | translate }}
       </a>
     </div>
 
-    <div class="w-2/3 overflow-y-hidden p-6">
-      <section #section1 id="section1" class="min-h-full scroll-mt-10">
-        <h2 class="text-3xl font-bold mb-4">{{ 'cv.education.title' | translate }}</h2>
-        <p>Contenuto esperienza...</p>
+    <div class="w-3/4 overflow-y-hidden h-full">
+      <section #section1 id="section1" class="min-h-full">
+        <h2 class="text-xl font-bold mb-1">
+          {{ 'cv.education.master.title' | translate }}
+          <span class="text-primary">&#64; {{ 'cv.education.master.university' | translate }}</span>
+        </h2>
+        <p class="mb-4 font-mono text-sm">{{ 'cv.education.master.period' | translate }}</p>
+        <div class="bg-base-200 p-4 rounded-xl shadow-md mb-6">
+          <p class="font-semibold mb-2">
+            📘 {{ 'cv.education.master.thesis.title' | translate }}
+          </p>
+          <div class="flex flex-col gap-1 text-sm text-base-content/80">
+            <span>
+              <span class="badge badge-outline badge-sm mr-2">{{ 'cv.education.master.thesis.supervisor.desc' | translate }}</span>
+              {{ 'cv.education.master.thesis.supervisor.name' | translate }}
+            </span>
+            <span>
+              <span class="badge badge-outline badge-sm mr-2">{{ 'cv.education.master.thesis.cosupervisor.desc' | translate }}</span>
+              {{ 'cv.education.master.thesis.cosupervisor.name' | translate }}
+            </span>
+          </div>
+        </div>
+        <div class="divider divider-secondary my-5 opacity-60"></div>
+        <h2 class="text-xl font-bold mb-1">
+          {{ 'cv.education.bachelor.title' | translate }}
+          <span class="text-primary">&#64; {{ 'cv.education.bachelor.university' | translate }}</span>
+        </h2>
+        <p class="mb-4 font-mono text-sm">{{ 'cv.education.bachelor.period' | translate }}</p>
+        <div class="bg-base-200 p-4 rounded-xl shadow-md mb-6">
+          <p class="font-semibold mb-2">
+            📘 {{ 'cv.education.bachelor.thesis.title' | translate }}
+          </p>
+          <div class="flex flex-col gap-1 text-sm text-base-content/80">
+            <span>
+              <span class="badge badge-outline badge-sm mr-2">{{ 'cv.education.bachelor.thesis.supervisor.desc' | translate }}</span>
+              {{ 'cv.education.bachelor.thesis.supervisor.name' | translate }}
+            </span>
+          </div>
+        </div>
       </section>
 
-      <section #section2 id="section2" class="min-h-full scroll-mt-10">
-        <h2 class="text-3xl font-bold mb-4">{{ 'work.intern.title' | translate }}</h2>
-        <p>Contenuto skills...</p>
+      <section #section2 id="section2" class="min-h-full">
+        <h2 class="text-xl font-bold mb-1">
+          {{ 'cv.work.intern.position' | translate }}
+          <span class="text-primary">&#64; {{ 'cv.work.intern.company' | translate }}</span>
+        </h2>
+        <p class="mb-4 font-mono text-sm">{{ 'cv.work.intern.period' | translate }}</p>
+        <p class="mb-2">{{ 'cv.work.intern.description' | translate }}</p>
+        <ul class="list-none pl-4">
+          @for (i of [1, 2, 3, 4, 5]; track i) {
+            <li class="before:content-['▸'] before:mr-5 mb-1">{{ ('cv.work.intern.responsibility.' + i) | translate }}</li>
+          }
+        </ul>
       </section>
 
-      <section #section3 id="section3" class="min-h-full scroll-mt-10">
-        <h2 class="text-3xl font-bold mb-4">{{ 'work.ppi.title' | translate }}</h2>
-        <p>Contenuto formazione...</p>
+      <section #section3 id="section3" class="min-h-full ">
+        <h2 class="text-xl font-bold mb-1">
+          {{ 'cv.work.ppi.position' | translate }}
+          <span class="text-primary">&#64; {{ 'cv.work.ppi.company' | translate }}</span>
+        </h2>
+        <p class="mb-4 font-mono text-sm">{{ 'cv.work.ppi.period' | translate }}</p>
+        <p class="mb-2">{{ 'cv.work.ppi.description' | translate }}</p>
+        <ul class="list-none pl-4">
+          @for (i of [1, 2, 3, 4, 5, 6, 7]; track i) {
+            <li class="before:content-['▸'] before:mr-5 mb-1">{{ ('cv.work.ppi.responsibility.' + i) | translate }}</li>
+          }
+        </ul>
       </section>
 
-      <section #section4 id="section4" class="min-h-full scroll-mt-10">
-        <h2 class="text-3xl font-bold mb-4">{{ 'work.ibm.title' | translate }}</h2>
-        <p>Contenuto formazione...</p>
+      <section #section4 id="section4" class="min-h-full ">
+        <h2 class="text-xl font-bold mb-1">
+          {{ 'cv.work.ibm.position' | translate }}
+          <span class="text-primary">&#64; {{ 'cv.work.ibm.company' | translate }}</span>
+        </h2>
+        <p class="mb-4 font-mono text-sm">{{ 'cv.work.ibm.period' | translate }}</p>
+        <p class="mb-2">{{ 'cv.work.ibm.description' | translate }}</p>
+        <ul class="list-none pl-4">
+          @for (i of [1, 2, 3, 4]; track i) {
+            <li class="before:content-['▸'] before:mr-5 mb-1">{{ ('cv.work.ibm.responsibility.' + i) | translate }}</li>
+          }
+        </ul>
       </section>
     </div>
   </div>

@@ -1,4 +1,38 @@
-<!-- Projects -->
-<section class="p-10" id="projects">
-  Projects
-</section>
+<div class="flex flex-col items-center py-20">
+  <div class="flex flex-grow font-bold text-left items-center w-2/3 pl-6">
+    <span class="font-mono text-primary mr-5">02.</span>
+    <span class="text-xl"> {{ 'projects.section.title' | translate }}</span>
+    <div class="divider divider-secondary opacity-60 w-full px-5"></div>
+  </div>
+  <div class="flex w-2/3 h-[60vh] overflow-y-auto p-6">
+    <div class="carousel w-full">
+      <section #slide1 id="slide1" class="carousel-item relative w-full">
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+          class="w-full" />
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a (click)="scrollToSection('slide3')" class="btn btn-circle">❮</a>
+          <a (click)="scrollToSection('slide2')" class="btn btn-circle">❯</a>
+        </div>
+      </section>
+      <section #slide2 id="slide2" class="carousel-item relative w-full">
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+          class="w-full" />
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a (click)="scrollToSection('slide1')" class="btn btn-circle">❮</a>
+          <a (click)="scrollToSection('slide3')" class="btn btn-circle">❯</a>
+        </div>
+      </section>
+      <section #slide3 id="slide3" class="carousel-item relative w-full">
+        <img
+          src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+          class="w-full" />
+        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+          <a (click)="scrollToSection('slide2')" class="btn btn-circle">❮</a>
+          <a (click)="scrollToSection('slide1')" class="btn btn-circle">❯</a>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,15 @@
 {
-  "ABOUT": "Chi sono",
-  "PROJECTS": "Progetti",
-  "CV": "CV",
+  "about": {
+    "section": {
+      "title": "Chi Sono"
+    },
+    "presentation": "Sviluppatore software entusiasta e attento ai dettagli, con una solida formazione accademica in matematica e crittografia. Esperto nello sviluppo full-stack, con esperienza pratica nella realizzazione e manutenzione di applicazioni web a livello enterprise. Dimostrata capacità di lavorare sia sul backend che sul frontend utilizzando Java, Spring Boot, Angular e strumenti DevOps moderni. Ha contribuito con successo a progetti basati su piattaforme blockchain e sistemi di gestione sicura dei dati. Abile nella risoluzione dei problemi, nel lavoro collaborativo in team agile e nella consegna di soluzioni robuste e scalabili."
+  },
+  "projects": {
+    "section": {
+      "title": "Progetti"
+    }
+  },
   "PORTFOLIO": "Portfolio",
   "hero": {
     "hello": "Ciao, il mio nome é",
@@ -11,6 +19,13 @@
     "button": "Check out my projects"
   },
   "cv": {
+    "section": {
+      "title": "CV",
+      "download": {
+        "en": "Scarica CV",
+        "it": "Scarica CV it"
+      }
+    },
     "education": {
       "title": "Educazione",
       "bachelor": {
@@ -18,7 +33,10 @@
         "university": "Universitá di Verona",
         "thesis": {
           "title": "Curve ellittiche in crittografia",
-          "supervisor": "Prof. Francesca Mantese"
+          "supervisor": {
+            "desc": "Relatore",
+            "name": "Prof. Francesca Mantese"
+          }
         }
       },
       "master": {
@@ -26,8 +44,14 @@
         "university": "Universitá di Trento",
         "thesis": {
           "title": "An overview of isogeny-based cryptography: broken and unbroken protocols",
-          "supervisor": "Prof. Nadir Murru",
-          "cosupervisor": "Dr. Marzio Mula"
+          "supervisor": {
+            "desc": "Relatore",
+            "name": "Prof. Nadir Murru"
+          },
+          "cosupervisor": {
+            "desc": "Co-Relatore",
+            "name": "Dr. Marzio Mula"
+          }
         }
       }
     }
@@ -67,7 +91,7 @@
     "ibm": {
       "title": "IBM",
       "company": "IBM CIC s.r.l",
-      "period": "04/2023 - 05/2024",
+      "period": "05/2024 - Presente",
       "address": "Viale San Bovio, 3 - 20054 Segrate (MI)",
       "position": "Practitioner - Application Developer-Cloud Fullstack",
       "description": "Refactoring e sviluppo funzionalità per la piattaforma CMO (Commissione Medico Ospedaliera), in collaborazione con il Ministero della Difesa.",
