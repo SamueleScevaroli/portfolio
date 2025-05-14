@@ -1,13 +1,17 @@
-import { IconDefinition } from "@fortawesome/angular-fontawesome";
+import {IconDefinition} from "@fortawesome/angular-fontawesome";
 import {
   faBars,
   faClose,
+  faCompress,
+  faDatabase,
   faDownload,
-  faEnvelope, faExpand,
+  faEnvelope,
+  faExpand,
+  faLeaf,
   faMoon,
   faSun
 } from "@fortawesome/free-solid-svg-icons";
-import {faGithub, faLinkedin} from "@fortawesome/free-brands-svg-icons";
+import {faAngular, faDocker, faGit, faGithub, faJava, faJs, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import {faFolder} from "@fortawesome/free-regular-svg-icons";
 
 export const fontAwesomeIcons: IconDefinition[] = [
@@ -20,5 +24,13 @@ export const fontAwesomeIcons: IconDefinition[] = [
   faClose,
   faDownload,
   faFolder,
-  faExpand
+  faExpand,
+  faCompress,
+  faJava,
+  faAngular,
+  faDocker,
+  faDatabase,
+  faLeaf,
+  faGit,
+  faJs
 ]

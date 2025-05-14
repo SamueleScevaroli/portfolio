@@ -1,12 +1,13 @@
-import { Component, ElementRef, ViewChild, inject, signal } from '@angular/core';
-import { FaIconComponent, FaIconLibrary } from '@fortawesome/angular-fontawesome';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { fontAwesomeIcons } from './shared/font-awesome-icons';
-import { AboutComponent } from './pages/about/about.component';
-import { CvComponent } from './pages/cv/cv.component';
-import { ProjectsComponent } from './pages/projects/projects.component';
-import { TemplatesComponent } from './pages/templates/templates.component';
-import { HomeComponent } from './pages/home/home.component';
+import {Component, ElementRef, inject, signal, ViewChild} from '@angular/core';
+import {FaIconComponent, FaIconLibrary} from '@fortawesome/angular-fontawesome';
+import {TranslatePipe, TranslateService} from '@ngx-translate/core';
+import {fontAwesomeIcons} from './shared/font-awesome-icons';
+import {AboutComponent} from './pages/about/about.component';
+import {CvComponent} from './pages/cv/cv.component';
+import {ProjectsComponent} from './pages/projects/projects.component';
+import {TemplatesComponent} from './pages/templates/templates.component';
+import {HomeComponent} from './pages/home/home.component';
+import {SkillsComponent} from "./pages/skills/skills.component";
 
 @Component({
   selector: 'app-root',
@@ -18,7 +19,8 @@ import { HomeComponent } from './pages/home/home.component';
     AboutComponent,
     CvComponent,
     ProjectsComponent,
-    TemplatesComponent
+    TemplatesComponent,
+    SkillsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -32,8 +34,20 @@ export class AppComponent {
   @ViewChild('cvSection') cvSection!: ElementRef<HTMLElement>;
   @ViewChild('projectsSection') projectsSection!: ElementRef<HTMLElement>;
   @ViewChild('templatesSection') templatesSection!: ElementRef<HTMLElement>;
+  @ViewChild('skillsSection') skillsSection!: ElementRef<HTMLElement>;
 
-  activeTab = signal<'homeSection' | 'aboutSection' | 'cvSection' | 'projectsSection' | 'templatesSection'>('homeSection');
+  navItems: {
+    section: 'aboutSection' | 'cvSection' | 'projectsSection' | 'templatesSection' | 'skillsSection',
+    label: string
+  }[] = [
+    {section: 'aboutSection', label: 'about.section.title'},
+    {section: 'cvSection', label: 'cv.section.title'},
+    {section: 'projectsSection', label: 'projects.section.title'},
+    {section: 'templatesSection', label: 'templates.section.title'},
+    {section: 'skillsSection', label: 'skills.section.title'},
+  ];
+
+  activeTab = signal<string>('homeSection');
 
   currentLang = signal<string>('en');
   flagUrl = signal<string>('https://flagcdn.com/w40/gb.png');
@@ -76,8 +90,8 @@ export class AppComponent {
     this.flagUrl.set(lang === 'it' ? 'https://flagcdn.com/w40/it.png' : 'https://flagcdn.com/w40/gb.png');
   }
 
-  scrollToSection(section: 'homeSection' | 'aboutSection' | 'cvSection' | 'projectsSection' | 'templatesSection') {
-    this[section]?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  scrollToSection(section: 'homeSection' | 'aboutSection' | 'cvSection' | 'projectsSection' | 'templatesSection' | 'skillsSection') {
+    this[section]?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
     this.activeTab.set(section);
   }
 }

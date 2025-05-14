@@ -10,11 +10,49 @@
       "title": "Progetti"
     }
   },
+  "templates": {
+    "section": {
+      "title": "Templates"
+    },
+    "cards": {
+      "1": {
+        "title": "Spring + Angular Kinde Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Kinde authentication."
+      },
+      "2": {
+        "title": "Spring + Angular Keycloak Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Keycloak authentication."
+      },
+      "3": {
+        "title": "Spring + Angular Jwt token Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Jwt token authentication."
+      }
+    }
+  },
+  "skills": {
+    "section": {
+      "title": "Conoscenze tecniche"
+    },
+    "cards": {
+      "1": {
+        "title": "Spring + Angular Kinde Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Kinde authentication."
+      },
+      "2": {
+        "title": "Spring + Angular Keycloak Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Keycloak authentication."
+      },
+      "3": {
+        "title": "Spring + Angular Jwt token Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Jwt token authentication."
+      }
+    }
+  },
   "PORTFOLIO": "Portfolio",
   "hero": {
     "hello": "Ciao, il mio nome é",
-    "name": "Samuele Scevaroli",
-    "introduction": "I build things for the web",
+    "name": "Samuele Scevaroli.",
+    "introduction": "Progetto e realizzo pagine web.",
     "description": "I'm a full stack developer, specialized in building and designing exceptional applications with Spring boot and Angular.",
     "button": "Check out my projects"
   },

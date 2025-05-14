@@ -6,11 +6,7 @@
 html, body {
   height: 100%;
   margin: 0;
-  overflow: hidden;
-}
-
-html{
-  scroll-behavior: smooth;
+  overflow-y: hidden;
 }
 
 .scrollbar-hide {

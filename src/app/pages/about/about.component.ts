@@ -1,16 +1,13 @@
-import { Component } from '@angular/core';
-import {FaIconComponent} from "@fortawesome/angular-fontawesome";
+import {Component} from '@angular/core';
 import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-about',
   standalone: true,
-    imports: [
-        FaIconComponent,
-        TranslatePipe
-    ],
-  templateUrl: './about.component.html',
-  styleUrl: './about.component.scss'
+  imports: [
+    TranslatePipe
+  ],
+  templateUrl: './about.component.html'
 })
 export class AboutComponent {
 

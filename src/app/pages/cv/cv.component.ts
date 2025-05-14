@@ -11,8 +11,7 @@ import {FaIconComponent} from "@fortawesome/angular-fontawesome";
     TranslatePipe,
     FaIconComponent
   ],
-  templateUrl: './cv.component.html',
-  styleUrl: './cv.component.scss'
+  templateUrl: './cv.component.html'
 })
 export class CvComponent {
   @ViewChild('section1') section1!: ElementRef<HTMLElement>;
@@ -20,20 +19,14 @@ export class CvComponent {
   @ViewChild('section3') section3!: ElementRef<HTMLElement>;
   @ViewChild('section4') section4!: ElementRef<HTMLElement>;
 
-  dropdownOpen = signal(false);
-
-  activeTab = signal<'section1' | 'section2' | 'section3' | 'section4'>('section1');
+  activeTab = signal<string>('section4');
 
   scrollToSection(section: 'section1' | 'section2' | 'section3' | 'section4') {
-    this[section]?.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    this.activeTab.set(section as 'section1' | 'section2' | 'section3' | 'section4');
+    this[section]?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'nearest'});
+    this.activeTab.set(section);
   }
 
   isActive(tab: string): boolean {
     return this.activeTab() === tab;
-  }
-
-  toggleDropdown() {
-    this.dropdownOpen.set(!this.dropdownOpen);
   }
 }

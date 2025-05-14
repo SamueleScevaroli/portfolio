@@ -30,10 +30,29 @@
       }
     }
   },
+  "skills": {
+    "section": {
+      "title": "Skills"
+    },
+    "cards": {
+      "1": {
+        "title": "Spring + Angular Kinde Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Kinde authentication."
+      },
+      "2": {
+        "title": "Spring + Angular Keycloak Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Keycloak authentication."
+      },
+      "3": {
+        "title": "Spring + Angular Jwt token Auth",
+        "desc": "Spring boot backend + Angular frontend application template with Jwt token authentication."
+      }
+    }
+  },
   "hero": {
     "hello": "Hi, my name is",
-    "name": "Samuele Scevaroli",
-    "introduction": "I build things for the web",
+    "name": "Samuele Scevaroli.",
+    "introduction": "I build things for the web.",
     "description": "I'm a full stack developer, specialized in building and designing exceptional applications with Spring boot and Angular.",
     "button": "Check out my projects"
   },
@@ -124,5 +143,4 @@
       }
     }
   }
-
 }
