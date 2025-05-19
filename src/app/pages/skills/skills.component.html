@@ -18,12 +18,12 @@
     }
   </div>
   @if (hasMore) {
-    <button class="btn btn-primary mt-6"
+    <button class="btn btn-outline btn-primary font-mono mt-6"
             (click)="showMore()">
       {{ 'projects.section.showMore' | translate }}
     </button>
   } @else if (!hasMore && skills().length > 6) {
-    <button class="btn btn-primary mt-6"
+    <button class="btn btn-outline btn-primary font-mono mt-6"
             (click)="showLess()">
       {{ 'projects.section.showLess' | translate }}
     </button>
