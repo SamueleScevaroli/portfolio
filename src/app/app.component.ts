@@ -5,9 +5,10 @@ import {fontAwesomeIcons} from './shared/font-awesome-icons';
 import {AboutComponent} from './pages/about/about.component';
 import {CvComponent} from './pages/cv/cv.component';
 import {ProjectsComponent} from './pages/projects/projects.component';
-import {TemplatesComponent} from './pages/templates/templates.component';
 import {HomeComponent} from './pages/home/home.component';
 import {SkillsComponent} from "./pages/skills/skills.component";
+import {NgStyle} from "@angular/common";
+import {FadeInOnScrollDirective} from "./common/fade-in-on-scroll.directive";
 
 @Component({
   selector: 'app-root',
@@ -19,8 +20,9 @@ import {SkillsComponent} from "./pages/skills/skills.component";
     AboutComponent,
     CvComponent,
     ProjectsComponent,
-    TemplatesComponent,
-    SkillsComponent
+    SkillsComponent,
+    NgStyle,
+    FadeInOnScrollDirective
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
@@ -33,25 +35,21 @@ export class AppComponent {
   @ViewChild('aboutSection') aboutSection!: ElementRef<HTMLElement>;
   @ViewChild('cvSection') cvSection!: ElementRef<HTMLElement>;
   @ViewChild('projectsSection') projectsSection!: ElementRef<HTMLElement>;
-  @ViewChild('templatesSection') templatesSection!: ElementRef<HTMLElement>;
   @ViewChild('skillsSection') skillsSection!: ElementRef<HTMLElement>;
 
   navItems: {
-    section: 'aboutSection' | 'cvSection' | 'projectsSection' | 'templatesSection' | 'skillsSection',
+    section: 'aboutSection' | 'cvSection' | 'projectsSection' | 'skillsSection',
     label: string
   }[] = [
     {section: 'aboutSection', label: 'about.section.title'},
     {section: 'cvSection', label: 'cv.section.title'},
     {section: 'projectsSection', label: 'projects.section.title'},
-    {section: 'templatesSection', label: 'templates.section.title'},
     {section: 'skillsSection', label: 'skills.section.title'},
   ];
 
-  activeTab = signal<string>('homeSection');
-
   currentLang = signal<string>('en');
   flagUrl = signal<string>('https://flagcdn.com/w40/gb.png');
-  currentTheme = signal<'abyss' | 'cupcake'>((localStorage.getItem('theme') as 'abyss' | 'cupcake') ?? 'abyss');
+  currentTheme = signal<'dim' | 'pastel'>((localStorage.getItem('theme') as 'dim' | 'pastel') ?? 'dim');
 
   ngOnInit(): void {
     this.faIconLibrary.addIcons(...fontAwesomeIcons);
@@ -72,7 +70,7 @@ export class AppComponent {
 
   toggleTheme(event: Event) {
     const isChecked = (event.target as HTMLInputElement).checked;
-    const newTheme = isChecked ? 'cupcake' : 'abyss';
+    const newTheme = isChecked ? 'pastel' : 'dim';
     this.currentTheme.set(newTheme);
     localStorage.setItem('theme', newTheme);
     document.documentElement.setAttribute('data-theme', newTheme);
@@ -90,8 +88,7 @@ export class AppComponent {
     this.flagUrl.set(lang === 'it' ? 'https://flagcdn.com/w40/it.png' : 'https://flagcdn.com/w40/gb.png');
   }
 
-  scrollToSection(section: 'homeSection' | 'aboutSection' | 'cvSection' | 'projectsSection' | 'templatesSection' | 'skillsSection') {
+  scrollToSection(section: 'homeSection' | 'aboutSection' | 'cvSection' | 'projectsSection' | 'skillsSection') {
     this[section]?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-    this.activeTab.set(section);
   }
 }

@@ -1,23 +1,26 @@
-import {Component, ElementRef, signal, ViewChild} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {TranslatePipe} from "@ngx-translate/core";
+import {ProjectCard} from "./project-card/project-card";
+import {NgClass} from "@angular/common";
+import {ProjectCardComponent} from "./project-card/project-card.component";
+import {ProjectsService} from "./projects.service";
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [TranslatePipe],
+  imports: [TranslatePipe, NgClass, ProjectCardComponent],
   templateUrl: './projects.component.html'
 })
 export class ProjectsComponent {
-  @ViewChild('slide1') slide1!: ElementRef<HTMLElement>;
-  @ViewChild('slide2') slide2!: ElementRef<HTMLElement>;
-  @ViewChild('slide3') slide3!: ElementRef<HTMLElement>;
+  private readonly service = inject(ProjectsService);
 
-  activeTab = signal<string>('slide1');
+  cards = this.service.cards;
+  expandedCard = this.service.expandedCard;
+  showMore = () => this.service.showMore();
+  showLess = () => this.service.showLess();
+  onExpandClick = (card: ProjectCard) => this.service.expandCard(card);
 
-  scrollToSection(slide: 'slide1' | 'slide2' | 'slide3') {
-    this[slide]?.nativeElement.scrollIntoView({behavior: 'smooth', block: 'nearest'});
-    this.activeTab.set(slide);
+  get hasMore() {
+    return this.service.hasMore();
   }
-
-
 }

@@ -1,1 +1,34 @@
-<p>skill-card works!</p>
+<div class="card bg-neutral shadow-md hover:shadow-xl">
+  <div class="card-body">
+    <div class="flex items-center space-x-4">
+      <div class="text-3xl text-primary">
+        <fa-icon [icon]="card().icon"></fa-icon>
+      </div>
+      <div>
+        <h2 class="card-title text-base-content">{{ card().name }}</h2>
+        <div class="badge badge-outline badge-sm">{{ card().category }}</div>
+      </div>
+    </div>
+    <p class="text-sm text-neutral-content/70 mt-2">{{ card().description }}</p>
+
+    <div class="mt-4">
+      <label class="label justify-between text-xs text-neutral-content/60">
+              <span class="font-mono">{{ 'skills.section.experience' | translate }}
+                : {{ card().experienceYears }} {{ 'skills.section.years' | translate }}</span>
+      </label>
+      <div class="flex space-x-1 mt-2">
+        @for (i of [1, 2, 3, 4, 5]; track i) {
+          <div
+            class="h-2 flex-1 rounded"
+            [ngClass]="{
+                    'bg-green-500': card().experienceYears >= i && card().experienceYears >= 5,
+                    'bg-yellow-500': card().experienceYears >= i && card().experienceYears >= 3 && card().experienceYears < 5,
+                    'bg-red-500': card().experienceYears >= i && card().experienceYears < 3,
+                    'bg-base-300': card().experienceYears < i
+                  }">
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</div>

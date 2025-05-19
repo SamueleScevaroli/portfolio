@@ -1,60 +1,113 @@
 {
+  "hero": {
+    "hello": "Ciao, il mio nome é",
+    "name": "Samuele Scevaroli.",
+    "introduction": "Realizzo applicazioni web.",
+    "description": "Sono uno sviluppatore full-stack, specializzato nello sviluppo di applicazioni web con l'utilizzo di framework moderni.",
+    "button": "Guarda i miei progetti"
+  },
   "about": {
     "section": {
       "title": "Chi Sono"
     },
-    "presentation": "Sviluppatore software entusiasta e attento ai dettagli, con una solida formazione accademica in matematica e crittografia. Esperto nello sviluppo full-stack, con esperienza pratica nella realizzazione e manutenzione di applicazioni web a livello enterprise. Dimostrata capacità di lavorare sia sul backend che sul frontend utilizzando Java, Spring Boot, Angular e strumenti DevOps moderni. Ha contribuito con successo a progetti basati su piattaforme blockchain e sistemi di gestione sicura dei dati. Abile nella risoluzione dei problemi, nel lavoro collaborativo in team agile e nella consegna di soluzioni robuste e scalabili."
+    "presentation": {
+      "1": "Sono uno sviluppatore software curioso e attento ai dettagli, con una solida formazione accademica in",
+      "2": "matematica",
+      "3": "e",
+      "4": "crittografia.",
+      "5": "Esperto nello sviluppo full-stack, con esperienza pratica nella realizzazione e manutenzione di",
+      "6": "applicazioni web.",
+      "7": "Possiedo una dimostrata capacità di lavorare sia sul",
+      "8": "backend",
+      "9": "che sul",
+      "10": "frontend",
+      "11": "utilizzando linguaggi, framework e strumenti DevOps moderni.",
+      "12": "Ho contribuito con successo a progetti basati su piattaforme blockchain e sistemi di gestione sicura dei dati. Abile nella risoluzione dei problemi, nel lavoro collaborativo in team agile e nella consegna di soluzioni robuste e scalabili."
+    }
   },
   "projects": {
     "section": {
-      "title": "Progetti"
-    }
-  },
-  "templates": {
-    "section": {
-      "title": "Templates"
+      "title": "Progetti",
+      "showMore": "Mostra altri",
+      "showLess": "Mostra meno",
+      "expand": "Espandi",
+      "collapse": "Collassa"
     },
     "cards": {
       "1": {
         "title": "Spring + Angular Kinde Auth",
-        "desc": "Spring boot backend + Angular frontend application template with Kinde authentication."
+        "desc": "Spring boot backend + Angular frontend application template with Kinde authentication.",
+        "badges": "['Java', 'Angular', 'Kinde']"
       },
       "2": {
         "title": "Spring + Angular Keycloak Auth",
-        "desc": "Spring boot backend + Angular frontend application template with Keycloak authentication."
+        "desc": "Spring boot backend + Angular frontend application template with Keycloak authentication.",
+        "badges": "['Java', 'Angular', 'Keycloak']"
       },
       "3": {
         "title": "Spring + Angular Jwt token Auth",
-        "desc": "Spring boot backend + Angular frontend application template with Jwt token authentication."
+        "desc": "Spring boot backend + Angular frontend application template with Jwt token authentication.",
+        "badges": "['Java', 'Angular', 'JWT']"
       }
     }
   },
   "skills": {
     "section": {
-      "title": "Conoscenze tecniche"
+      "title": "Conoscenze tecniche",
+      "experience": "Esperienza",
+      "years": "anni"
     },
     "cards": {
       "1": {
-        "title": "Spring + Angular Kinde Auth",
-        "desc": "Spring boot backend + Angular frontend application template with Kinde authentication."
+        "name": "Java",
+        "category": "Backend",
+        "description": "OOP, Spring Boot, REST APIs",
+        "experienceYears": "5",
+        "icon": "faJava"
       },
       "2": {
-        "title": "Spring + Angular Keycloak Auth",
-        "desc": "Spring boot backend + Angular frontend application template with Keycloak authentication."
+        "name": "Angular",
+        "description": "PA, RxJS, Forms, Material",
+        "experienceYears": "4",
+        "category": "Frontend",
+        "icon": "faAngular"
       },
       "3": {
-        "title": "Spring + Angular Jwt token Auth",
-        "desc": "Spring boot backend + Angular frontend application template with Jwt token authentication."
+        "name": "PostgreSQL",
+        "description": "Complex queries, optimization, indexes",
+        "experienceYears": "2",
+        "category": "Database",
+        "icon": "faDatabase"
+      },
+      "4": {
+        "name": "Spring",
+        "description": "Spring Boot, Security, JPA",
+        "experienceYears": "4",
+        "category": "Backend",
+        "icon": "faLeaf"
+      },
+      "5": {
+        "name": "Docker",
+        "description": "Containers, volumes, Docker Compose",
+        "experienceYears": "3",
+        "category": "DevOps",
+        "icon": "faDocker"
+      },
+      "6": {
+        "name": "TypeScript",
+        "description": "Strict types, interfaces, Angular",
+        "experienceYears": "3",
+        "category": "Frontend",
+        "icon": "faJs"
+      },
+      "7": {
+        "name": "Git",
+        "description": "Branching, merging, PRs",
+        "experienceYears": "4",
+        "category": "Tools",
+        "icon": "faGit"
       }
     }
-  },
-  "PORTFOLIO": "Portfolio",
-  "hero": {
-    "hello": "Ciao, il mio nome é",
-    "name": "Samuele Scevaroli.",
-    "introduction": "Progetto e realizzo pagine web.",
-    "description": "I'm a full stack developer, specialized in building and designing exceptional applications with Spring boot and Angular.",
-    "button": "Check out my projects"
   },
   "cv": {
     "section": {

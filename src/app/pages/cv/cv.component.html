@@ -4,34 +4,36 @@
     <span class="text-2xl"> {{ 'cv.section.title' | translate }}</span>
     <div class="divider divider-secondary opacity-60 w-full px-5"></div>
     <div class="tooltip" [attr.data-tip]="'cv.section.download.en' | translate">
-      <a href="assets/cv/cv_en.pdf" download><button class="btn btn-primary">
-        <fa-icon [icon]="['fas', 'download']"></fa-icon>
-      </button></a>
+      <a href="assets/cv/cv_en.pdf" download>
+        <button class="btn btn-primary">
+          <fa-icon [icon]="['fas', 'download']"></fa-icon>
+        </button>
+      </a>
     </div>
   </div>
   <div class="flex w-2/3 h-[60vh] p-6">
     <div class="w-1/4 p-4 flex flex-col">
       <a (click)="scrollToSection('section4')"
-         [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section4')}"
-         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
+         [ngClass]="{'tab-active border-l-2 border-primary text-primary bg-neutral': isActive('section4')}"
+         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono text-base">
         {{ 'cv.work.ibm.title' | translate }}
       </a>
 
       <a (click)="scrollToSection('section3')"
-         [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section3')}"
-         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
+         [ngClass]="{'tab-active border-l-2 border-primary text-primary bg-neutral': isActive('section3')}"
+         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono text-base">
         {{ 'cv.work.ppi.title' | translate }}
       </a>
 
       <a (click)="scrollToSection('section2')"
-         [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section2')}"
-         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
+         [ngClass]="{'tab-active border-l-2 border-primary text-primary bg-neutral': isActive('section2')}"
+         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono text-base">
         {{ 'cv.work.intern.title' | translate }}
       </a>
 
       <a (click)="scrollToSection('section1')"
-         [ngClass]="{'tab-active border-l-2 border-primary text-primary': isActive('section1')}"
-         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l">
+         [ngClass]="{'tab-active border-l-2 border-primary text-primary bg-neutral': isActive('section1')}"
+         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono text-base">
         {{ 'cv.education.title' | translate }}
       </a>
     </div>
@@ -43,10 +45,12 @@
           <span class="text-primary">&#64; {{ 'cv.work.ibm.company' | translate }}</span>
         </h2>
         <p class="mb-4 font-mono text-sm">{{ 'cv.work.ibm.period' | translate }}</p>
-        <p class="mb-2">{{ 'cv.work.ibm.description' | translate }}</p>
-        <ul class="list-none pl-4">
+        <p class="mb-3">{{ 'cv.work.ibm.description' | translate }}</p>
+        <ul class="list-none pl-4 space-y-2">
           @for (i of [1, 2, 3, 4]; track i) {
-            <li class="before:content-['▸'] before:mr-5 mb-1">{{ ('cv.work.ibm.responsibility.' + i) | translate }}</li>
+            <li
+              class="before:content-['▸'] before:mr-5 before:text-primary before:text-xl">{{ ('cv.work.ibm.responsibility.' + i) | translate }}
+            </li>
           }
         </ul>
       </section>
@@ -57,10 +61,12 @@
           <span class="text-primary">&#64; {{ 'cv.work.ppi.company' | translate }}</span>
         </h2>
         <p class="mb-4 font-mono text-sm">{{ 'cv.work.ppi.period' | translate }}</p>
-        <p class="mb-2">{{ 'cv.work.ppi.description' | translate }}</p>
-        <ul class="list-none pl-4">
+        <p class="mb-3">{{ 'cv.work.ppi.description' | translate }}</p>
+        <ul class="list-none pl-4 space-y-2">
           @for (i of [1, 2, 3, 4, 5, 6, 7]; track i) {
-            <li class="before:content-['▸'] before:mr-5 mb-1">{{ ('cv.work.ppi.responsibility.' + i) | translate }}</li>
+            <li
+              class="before:content-['▸'] before:mr-5 before:text-primary before:text-xl">{{ ('cv.work.ppi.responsibility.' + i) | translate }}
+            </li>
           }
         </ul>
       </section>
@@ -71,10 +77,12 @@
           <span class="text-primary">&#64; {{ 'cv.work.intern.company' | translate }}</span>
         </h2>
         <p class="mb-4 font-mono text-sm">{{ 'cv.work.intern.period' | translate }}</p>
-        <p class="mb-2">{{ 'cv.work.intern.description' | translate }}</p>
-        <ul class="list-none pl-4">
+        <p class="mb-3">{{ 'cv.work.intern.description' | translate }}</p>
+        <ul class="list-none pl-4 space-y-2">
           @for (i of [1, 2, 3, 4, 5]; track i) {
-            <li class="before:content-['▸'] before:mr-5 mb-1">{{ ('cv.work.intern.responsibility.' + i) | translate }}</li>
+            <li
+              class="before:content-['▸'] before:mr-5 before:text-primary before:text-xl">{{ ('cv.work.intern.responsibility.' + i) | translate }}
+            </li>
           }
         </ul>
       </section>
@@ -85,17 +93,19 @@
           <span class="text-primary">&#64; {{ 'cv.education.master.university' | translate }}</span>
         </h2>
         <p class="mb-4 font-mono text-sm">{{ 'cv.education.master.period' | translate }}</p>
-        <div class="bg-base-200 p-4 rounded-xl shadow-md mb-6">
+        <div class="bg-base-100 p-4 rounded-xl shadow-md mb-6">
           <p class="font-semibold mb-2">
             📘 {{ 'cv.education.master.thesis.title' | translate }}
           </p>
           <div class="flex flex-col gap-1 text-sm text-base-content/80">
             <span>
-              <span class="badge badge-outline badge-sm mr-2">{{ 'cv.education.master.thesis.supervisor.desc' | translate }}</span>
+              <span
+                class="badge badge-outline badge-sm mr-2 font-mono">{{ 'cv.education.master.thesis.supervisor.desc' | translate }}</span>
               {{ 'cv.education.master.thesis.supervisor.name' | translate }}
             </span>
             <span>
-              <span class="badge badge-outline badge-sm mr-2">{{ 'cv.education.master.thesis.cosupervisor.desc' | translate }}</span>
+              <span
+                class="badge badge-outline badge-sm mr-2 font-mono">{{ 'cv.education.master.thesis.cosupervisor.desc' | translate }}</span>
               {{ 'cv.education.master.thesis.cosupervisor.name' | translate }}
             </span>
           </div>
@@ -106,13 +116,14 @@
           <span class="text-primary">&#64; {{ 'cv.education.bachelor.university' | translate }}</span>
         </h2>
         <p class="mb-4 font-mono text-sm">{{ 'cv.education.bachelor.period' | translate }}</p>
-        <div class="bg-base-200 p-4 rounded-xl shadow-md mb-6">
+        <div class="bg-base-100 p-4 rounded-xl shadow-md mb-6">
           <p class="font-semibold mb-2">
             📘 {{ 'cv.education.bachelor.thesis.title' | translate }}
           </p>
           <div class="flex flex-col gap-1 text-sm text-base-content/80">
             <span>
-              <span class="badge badge-outline badge-sm mr-2">{{ 'cv.education.bachelor.thesis.supervisor.desc' | translate }}</span>
+              <span
+                class="badge badge-outline badge-sm mr-2 font-mono">{{ 'cv.education.bachelor.thesis.supervisor.desc' | translate }}</span>
               {{ 'cv.education.bachelor.thesis.supervisor.name' | translate }}
             </span>
           </div>

@@ -1,46 +1,32 @@
 <div class="flex flex-col items-center py-20">
   <div class="flex flex-grow font-bold text-left items-center w-2/3 pl-6">
-    <span class="font-mono text-xl text-primary mr-5">05.</span>
-    <span class="text-2xl"> {{ 'skills.section.title' | translate }}</span>
+    <span class="font-mono text-xl text-primary mr-5">04.</span>
+    <span class="text-2xl whitespace-nowrap"> {{ 'skills.section.title' | translate }}</span>
     <div class="divider divider-secondary opacity-60 w-full px-5"></div>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-    @for (skill of skills; track $index) {
-      <div class="card bg-neutral shadow-md hover:shadow-xl transition-all duration-300">
-        <div class="card-body">
-          <div class="flex items-center space-x-4">
-            <div class="text-3xl text-primary">
-              <fa-icon [icon]="skill.icon"></fa-icon>
-            </div>
-            <div>
-              <h2 class="card-title text-base-content">{{ skill.name }}</h2>
-              <div class="badge badge-outline badge-sm">{{ skill.category }}</div>
-            </div>
-          </div>
-          <p class="text-sm text-neutral-content/70 mt-2">{{ skill.description }}</p>
-
-          <div class="mt-4">
-            <label class="label justify-between text-xs text-neutral-content/60">
-              <span>Experience</span>
-              <span>{{ skill.experienceYears }} years</span>
-            </label>
-            <div class="flex space-x-1 mt-2">
-              @for (i of [1, 2, 3, 4, 5]; track i) {
-                <div
-                  class="h-2 flex-1 rounded transition-all duration-300"
-                  [ngClass]="{
-                    'bg-green-500': skill.experienceYears >= i && skill.experienceYears >= 5,
-                    'bg-yellow-500': skill.experienceYears >= i && skill.experienceYears >= 3 && skill.experienceYears < 5,
-                    'bg-red-500': skill.experienceYears >= i && skill.experienceYears < 3,
-                    'bg-base-300': skill.experienceYears < i
-                  }">
-                </div>
-              }
-            </div>
-          </div>
+    @for (skill of skills(); track $index) {
+      <div class="group [perspective:1000px]">
+        <div
+          class="relative h-full w-full transition-all duration-1000 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <app-skill-card [card]="skill"></app-skill-card> <!-- FRONT CARD -->
+          <div
+            class="absolute inset-0 h-full w-full bg-neutral-content [transform:rotateY(180deg)] [backface-visibility:hidden]"></div>
         </div>
       </div>
+
     }
   </div>
+  @if (hasMore) {
+    <button class="btn btn-primary mt-6"
+            (click)="showMore()">
+      {{ 'projects.section.showMore' | translate }}
+    </button>
+  } @else if (!hasMore && skills().length > 6) {
+    <button class="btn btn-primary mt-6"
+            (click)="showLess()">
+      {{ 'projects.section.showLess' | translate }}
+    </button>
+  }
 
 </div>

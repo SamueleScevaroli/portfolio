@@ -1,2 +1,5 @@
-
+.tooltip-delay:hover::before,
+.tooltip-delay:hover::after {
+  transition-delay: 800ms; /* Delay di 300ms */
+}
 

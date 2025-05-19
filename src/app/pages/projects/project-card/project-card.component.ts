@@ -1,24 +1,25 @@
-import {Component, EventEmitter, input, Output, signal} from '@angular/core';
+import {Component, EventEmitter, input, Output} from '@angular/core';
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
+import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
-  selector: 'app-template-card',
+  selector: 'app-project-card',
   standalone: true,
   imports: [
-    FaIconComponent
+    FaIconComponent,
+    TranslatePipe
   ],
-  templateUrl: './template-card.component.html'
+  templateUrl: './project-card.component.html',
 })
-export class TemplateCardComponent {
+export class ProjectCardComponent {
   title = input<string>();
   description = input<string>();
   badges = input<string[]>();
-  isExpanded = signal<boolean>(false);
+  isExpanded = input<boolean | null>(false);
 
   @Output() expandClick = new EventEmitter<void>();
 
   toggleExpand(): void {
     this.expandClick.emit();
-    this.isExpanded.update(current => !current);
   }
 }

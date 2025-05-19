@@ -4,35 +4,29 @@
     <span class="text-2xl"> {{ 'projects.section.title' | translate }}</span>
     <div class="divider divider-secondary opacity-60 w-full px-5"></div>
   </div>
-  <div class="flex w-2/3 h-[60vh] overflow-y-auto p-6">
-    <div class="carousel w-full">
-      <section #slide1 id="slide1" class="carousel-item relative w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
-          class="w-full" />
-        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a (click)="scrollToSection('slide3')" class="btn btn-circle">❮</a>
-          <a (click)="scrollToSection('slide2')" class="btn btn-circle">❯</a>
-        </div>
-      </section>
-      <section #slide2 id="slide2" class="carousel-item relative w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-          class="w-full" />
-        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a (click)="scrollToSection('slide1')" class="btn btn-circle">❮</a>
-          <a (click)="scrollToSection('slide3')" class="btn btn-circle">❯</a>
-        </div>
-      </section>
-      <section #slide3 id="slide3" class="carousel-item relative w-full">
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-          class="w-full" />
-        <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
-          <a (click)="scrollToSection('slide2')" class="btn btn-circle">❮</a>
-          <a (click)="scrollToSection('slide1')" class="btn btn-circle">❯</a>
-        </div>
-      </section>
-    </div>
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 grid-rows-2 w-2/3 h-full overflow-y-hidden p-6 gap-2 grid-flow-dense transition-all duration-500">
+    @for (card of cards(); track $index) {
+      <app-project-card [title]="card.title"
+                        [description]="card.description"
+                        [badges]="card.badges"
+                        [isExpanded]="this.expandedCard() && this.expandedCard()?.title === card.title"
+                        [ngClass]="{'col-span-1': !this.expandedCard(), 'col-span-full row-span-2 h-[50vh]': this.expandedCard()}"
+                        (expandClick)="onExpandClick(card)">
+      </app-project-card>
+    }
   </div>
+
+  @if (hasMore && !this.expandedCard()) {
+    <button class="btn btn-primary mt-6"
+            (click)="showMore()">
+      {{ 'projects.section.showMore' | translate }}
+    </button>
+  } @else if (!hasMore && cards().length > 6) {
+    <button class="btn btn-primary mt-6"
+            (click)="showLess()">
+      {{ 'projects.section.showLess' | translate }}
+    </button>
+  }
+
 </div>

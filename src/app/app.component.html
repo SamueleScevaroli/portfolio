@@ -1,17 +1,18 @@
-<div class="flex flex-col h-screen overflow-y-auto bg-base-100">
+<div class="flex flex-col h-screen overflow-y-auto bg-base-200">
   <!-- Navbar -->
-  <nav class="navbar sticky top-0 z-10 py-6 bg-base-100 border-b border-secondary/50">
+  <nav
+    class="navbar sticky top-0 z-10 py-10 bg-base-100 border-b border-secondary/50">
     <div class="navbar-start">
-      <div class="dropdown lg:hidden">
+      <div class="dropdown lg:hidden ">
         <label tabindex="0" class="btn btn-ghost swap swap-rotate">
           <input type="checkbox"/>
           <fa-icon [icon]="['fas', 'bars']" class="swap-off"></fa-icon>
           <fa-icon [icon]="['fas', 'close']" class="swap-on"></fa-icon>
         </label>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-10 p-2 shadow rounded-box w-52">
+        <ul tabindex="0" class="menu menu-sm bg-base-100 dropdown-content mt-3 z-10 p-2 shadow rounded-box w-60">
           @for (item of navItems; track $index) {
             <li>
-              <a class="font-mono" (click)="scrollToSection(item.section)">
+              <a class="font-mono text-base" (click)="scrollToSection(item.section)">
                 <span class="text-primary">0{{ $index + 1 }}.</span>
                 <span class="text-neutral-content/60 hover:text-neutral-content">
                   {{ item.label | translate }}
@@ -21,13 +22,16 @@
           }
         </ul>
       </div>
-      <a class="ps-4 text-xl cursor-pointer" (click)="scrollToSection('homeSection')">S</a>
+      <a class="p-4 text-xl cursor-pointer opacity-0 animate-slide-down"
+         (click)="scrollToSection('homeSection')">
+        <img src="../assets/images/logo.png" alt="Logo" class="h-12 w-12 object-contain"/>
+      </a>
     </div>
 
     <div class="navbar-end hidden lg:flex w-full justify-end items-center space-x-4">
       <ul class="menu menu-horizontal space-x-4">
         @for (item of navItems; track $index) {
-          <li>
+          <li class="opacity-0 animate-slide-down" [ngStyle]="{'animation-delay': ($index * 0.15) + 's'}">
             <a class="font-mono" (click)="scrollToSection(item.section)">
               <span class="text-primary">0{{ $index + 1 }}.</span>
               <span class="text-neutral-content/60 hover:text-neutral-content">
@@ -37,12 +41,12 @@
           </li>
         }
       </ul>
-      <label class="swap swap-rotate">
-        <input type="checkbox" [checked]="currentTheme() === 'cupcake'" (change)="toggleTheme($event)"/>
+      <label class="swap swap-rotate opacity-0 animate-slide-down" [ngStyle]="{'animation-delay': '0.6s'}">
+        <input type="checkbox" [checked]="currentTheme() === 'pastel'" (change)="toggleTheme($event)"/>
         <fa-icon [icon]="['fas', 'sun']" class="swap-off"></fa-icon>
         <fa-icon [icon]="['fas', 'moon']" class="swap-on"></fa-icon>
       </label>
-      <label class="swap swap-indeterminate">
+      <label class="swap swap-indeterminate opacity-0 animate-slide-down" [ngStyle]="{'animation-delay': '0.7s'}">
         <input type="checkbox" [checked]="currentLang() === 'en'" (change)="toggleLanguage()"/>
         <div class="swap-off w-8 rounded-full overflow-hidden">
           <img [src]="flagUrl()" alt="Italiano" class="w-full h-full object-cover"/>
@@ -56,24 +60,28 @@
 
 
   <!-- Main content -->
-  <div class="flex flex-grow">
+  <div class="flex flex-grow bg-base-200">
     <!-- Left social -->
-    <div class="fixed top-16 left-0 w-20 p-4 hidden md:flex flex-col justify-end h-[calc(100vh-4rem)]">
-      <ul class="menu rounded-box">
+    <div
+      class="fixed top-16 left-0 w-18 p-5 hidden md:flex flex-col justify-end h-[calc(100vh-4rem)] opacity-0 animate-slide-up"
+      [ngStyle]="{'animation-delay': '2.2s'}">
+      <ul>
         <li>
           <a
-            class="tooltip tooltip-right text-neutral-content/60 hover:text-neutral-content hover:bg-base-100 cursor-pointer text-2xl"
+            class="tooltip tooltip-delay tooltip-right text-neutral-content/60 hover:text-primary hover:bg-base-100 cursor-pointer text-3xl
+             transition-transform duration-300 hover:-translate-y-1 mb-3"
             data-tip="Github"
             href="https://github.com/SamueleScevaroli" target="_blank" rel="noopener noreferrer">
-            <fa-icon [icon]="['fab', 'github']" class="social-icon"></fa-icon>
+            <fa-icon [icon]="['fab', 'github']"></fa-icon>
           </a>
         </li>
         <li>
           <a
-            class="tooltip tooltip-right text-neutral-content/60 hover:text-neutral-content hover:bg-base-100 cursor-pointer text-2xl"
+            class="tooltip tooltip-delay tooltip-right text-neutral-content/60 hover:text-primary hover:bg-base-100 cursor-pointer text-3xl
+            transition-transform duration-300 hover:-translate-y-1 mb-3"
             data-tip="LinkedIn"
             href="https://www.linkedin.com/in/samuele-scevaroli-847a911b9" target="_blank" rel="noopener noreferrer">
-            <fa-icon [icon]="['fab', 'linkedin']" class="social-icon"></fa-icon>
+            <fa-icon [icon]="['fab', 'linkedin']"></fa-icon>
           </a>
         </li>
       </ul>
@@ -81,32 +89,32 @@
 
 
     <!-- Sections -->
-    <div class="flex-grow h-[calc(100vh-4rem)]">
+    <div class="flex-grow h-[calc(100vh-4rem)] ">
       <section #homeSection id="homeSection" class="h-screen scroll-mt-24">
         <app-home></app-home>
       </section>
-      <section #aboutSection id="aboutSection" class="h-screen scroll-mt-24">
+      <section #aboutSection id="aboutSection" class="h-screen scroll-mt-24" appFadeInOnScroll>
         <app-about></app-about>
       </section>
-      <section #cvSection id="cvSection" class="h-screen scroll-mt-24">
+      <section #cvSection id="cvSection" class="h-screen scroll-mt-24" appFadeInOnScroll>
         <app-cv></app-cv>
       </section>
-      <section #projectsSection id="projectsSection" class="h-screen scroll-mt-24">
+      <section #projectsSection id="projectsSection" class="scroll-mt-24" appFadeInOnScroll>
         <app-projects></app-projects>
       </section>
-      <section #templatesSection id="templatesSection" class="h-screen scroll-mt-24">
-        <app-templates></app-templates>
-      </section>
-      <section #skillsSection id="skillsSection" class="h-screen scroll-mt-24">
+      <section #skillsSection id="skillsSection" class="h-screen scroll-mt-24" appFadeInOnScroll>
         <app-skills></app-skills>
       </section>
     </div>
 
     <!-- Right email -->
-    <div class="fixed top-16 right-0 w-20 p-6 hidden md:flex flex-col justify-end h-[calc(100vh-4rem)]">
-      <a class="tooltip tooltip-left link link-hover" data-tip="Click to send me Email!"
+    <div
+      class="fixed top-16 right-0 w-20 p-6 hidden md:flex flex-col justify-end h-[calc(100vh-4rem)] opacity-0 animate-slide-up"
+      [ngStyle]="{'animation-delay': '2.2s'}">
+      <a class="tooltip tooltip-delay tooltip-left link link-hover" data-tip="Click to send me Email!"
          href="mailto:samusceva@gmail.com">
-        <span class="font-mono text-neutral-content/60 hover:text-neutral-content tracking-widest"
+        <span class="font-mono text-neutral-content/60 hover:text-primary tracking-widest
+              transition-transform duration-300 hover:-translate-y-1"
               style="writing-mode: vertical-rl; transform: rotate(360deg);">
           samusceva&#64;gmail.com
         </span>

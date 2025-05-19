@@ -1,11 +1,23 @@
 <div class="hero h-screen px-20">
   <div class="hero-content text-left text-lg pb-30">
     <div>
-      <p class="text-primary mb-3 font-mono">{{ 'hero.hello' | translate }}</p>
-      <h1 class="text-7xl font-bold mb-4">{{ 'hero.name' | translate }}</h1>
-      <h2 class="text-7xl font-bold mb-5 opacity-70">{{ 'hero.introduction' | translate }}</h2>
-      <p class="mb-10 opacity-70 max-w-lg">{{ 'hero.description' | translate }}</p>
-      <button class="btn btn-outline btn-primary font-mono p-7">{{ 'hero.button' | translate }}</button>
+      <p class="text-primary mb-3 font-mono opacity-0 animate-slide-up" [ngStyle]="{'animation-delay': '1s'}">
+        {{ 'hero.hello' | translate }}
+      </p>
+      <h1 class="sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-4 opacity-0 animate-slide-up"
+          [ngStyle]="{'animation-delay': '1.2s'}">
+        {{ 'hero.name' | translate }}
+      </h1>
+      <h2 class="text-7xl font-bold mb-5 opacity-0 animate-slide-up-70" [ngStyle]="{'animation-delay': '1.4s'}">
+        {{ 'hero.introduction' | translate }}
+      </h2>
+      <p class="mb-10 max-w-lg opacity-0 animate-slide-up-70" [ngStyle]="{'animation-delay': '1.6s'}">
+        {{ 'hero.description' | translate }}
+      </p>
+      <button class="btn btn-outline btn-primary font-mono p-7 opacity-0 animate-slide-up"
+              [ngStyle]="{'animation-delay': '1.8s'}">
+        {{ 'hero.button' | translate }}
+      </button>
     </div>
   </div>
 </div>
