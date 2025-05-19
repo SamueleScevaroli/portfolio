@@ -68,7 +68,7 @@
       <ul>
         <li>
           <a
-            class="tooltip tooltip-delay tooltip-right text-neutral-content/60 hover:text-primary hover:bg-base-100 cursor-pointer text-3xl
+            class="tooltip tooltip-delay tooltip-right text-neutral-content/60 hover:text-primary hover:bg-base-200 cursor-pointer text-3xl
              transition-transform duration-300 hover:-translate-y-1 mb-3"
             data-tip="Github"
             href="https://github.com/SamueleScevaroli" target="_blank" rel="noopener noreferrer">
@@ -77,7 +77,7 @@
         </li>
         <li>
           <a
-            class="tooltip tooltip-delay tooltip-right text-neutral-content/60 hover:text-primary hover:bg-base-100 cursor-pointer text-3xl
+            class="tooltip tooltip-delay tooltip-right text-neutral-content/60 hover:text-primary hover:bg-base-200 cursor-pointer text-3xl
             transition-transform duration-300 hover:-translate-y-1 mb-3"
             data-tip="LinkedIn"
             href="https://www.linkedin.com/in/samuele-scevaroli-847a911b9" target="_blank" rel="noopener noreferrer">
@@ -111,8 +111,10 @@
     <div
       class="fixed top-16 right-0 w-20 p-6 hidden md:flex flex-col justify-end h-[calc(100vh-4rem)] opacity-0 animate-slide-up"
       [ngStyle]="{'animation-delay': '2.2s'}">
-      <a class="tooltip tooltip-delay tooltip-left link link-hover" data-tip="Click to send me Email!"
-         href="mailto:samusceva@gmail.com">
+      <a
+        class="tooltip tooltip-delay tooltip-left link link-hover transition-transform duration-300 hover:-translate-y-1"
+        data-tip="Click to send me Email!"
+        href="mailto:samusceva@gmail.com">
         <span class="font-mono text-neutral-content/60 hover:text-primary tracking-widest
               transition-transform duration-300 hover:-translate-y-1"
               style="writing-mode: vertical-rl; transform: rotate(360deg);">
