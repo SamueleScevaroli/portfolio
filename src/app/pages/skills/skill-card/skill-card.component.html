@@ -2,11 +2,12 @@
   <div class="card-body">
     <div class="flex items-center space-x-4">
       <div class="text-3xl text-primary">
-        <fa-icon [icon]="card().icon"></fa-icon>
+        <!--        <fa-icon [icon]="card().icon"></fa-icon>-->
+        <img [src]="card().icon" alt="Icon" class="w-10 h-10"/>
       </div>
       <div>
         <h2 class="card-title text-base-content">{{ card().name }}</h2>
-        <div class="badge badge-outline badge-sm">{{ card().category }}</div>
+        <div class="badge badge-outline font-mono badge-sm">{{ card().category }}</div>
       </div>
     </div>
     <p class="text-sm text-neutral-content/70 mt-2">{{ card().description }}</p>

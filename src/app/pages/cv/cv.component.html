@@ -1,129 +1,199 @@
 <div class="flex flex-col items-center py-20">
-  <div class="flex flex-grow font-bold text-left items-center w-2/3 pl-6">
-    <span class="font-mono text-xl text-primary mr-5">02.</span>
-    <span class="text-2xl"> {{ 'cv.section.title' | translate }}</span>
+  <div class="flex flex-grow font-bold text-left items-center w-5/6 md:w-2/3 pl-6">
+    <span class="font-mono text-sm sm:text-base md:text-lg lg:text-xl text-primary mr-5">02.</span>
+    <span class="text-base sm:text-lg md:text-xl lg:text-2xl"> {{ 'cv.section.title' | translate }}</span>
     <div class="divider divider-secondary opacity-60 w-full px-5"></div>
-    <div class="tooltip" [attr.data-tip]="'cv.section.download.en' | translate">
-      <a href="assets/cv/cv_en.pdf" download>
-        <button class="btn btn-primary">
-          <fa-icon [icon]="['fas', 'download']"></fa-icon>
-        </button>
-      </a>
-    </div>
   </div>
-  <div class="flex w-2/3 h-[60vh] p-6">
-    <div class="w-1/4 p-4 flex flex-col">
+  <div class="flex w-5/6 md:w-2/3 h-[60vh] pt-4 md:pt-6">
+    <div class="w-1/4 p-2 md:p-3 lg:p-4 flex flex-col text-xs sm:text-sm md:text-base lg:text-base">
       <a (click)="scrollToSection('section4')"
          [ngClass]="{'border-l-2 border-primary text-primary bg-neutral': isActive('section4')}"
-         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono text-base">
+         class="p-1 md:p-2 lg:p-3 cursor-pointer justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono">
         {{ 'cv.work.ibm.title' | translate }}
       </a>
 
       <a (click)="scrollToSection('section3')"
          [ngClass]="{'border-l-2 border-primary text-primary bg-neutral': isActive('section3')}"
-         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono text-base">
+         class="p-1 md:p-2 lg:p-3 cursor-pointer justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono">
         {{ 'cv.work.ppi.title' | translate }}
       </a>
 
       <a (click)="scrollToSection('section2')"
          [ngClass]="{'border-l-2 border-primary text-primary bg-neutral': isActive('section2')}"
-         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono text-base">
+         class="p-1 md:p-2 lg:p-3 cursor-pointer justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono">
         {{ 'cv.work.intern.title' | translate }}
       </a>
 
       <a (click)="scrollToSection('section1')"
          [ngClass]="{'border-l-2 border-primary text-primary bg-neutral': isActive('section1')}"
-         class="tab justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono text-base">
+         class="p-1 md:p-2 lg:p-3 cursor-pointer justify-start hover:bg-neutral hover:text-primary border-base-content/50 border-l font-mono">
         {{ 'cv.education.title' | translate }}
       </a>
     </div>
 
     <div class="w-3/4 overflow-y-hidden h-full">
       <section #section4 id="section4" class="min-h-full ">
-        <h2 class="text-xl font-bold mb-1">
+        <h2 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1">
           {{ 'cv.work.ibm.position' | translate }}
           <span class="text-primary">&#64; {{ 'cv.work.ibm.company' | translate }}</span>
         </h2>
-        <p class="mb-4 font-mono text-sm">{{ 'cv.work.ibm.period' | translate }}</p>
-        <p class="mb-3">{{ 'cv.work.ibm.description' | translate }}</p>
-        <ul class="list-none pl-4 space-y-2">
+        <p
+          class="mb-2 sm:mb-3 md:mb-4 font-mono text-3xs sm:text-2xs md:text-xs lg:text-sm">{{ 'cv.work.ibm.period' | translate }}</p>
+        <p class="mb-1 sm:mb-2 md:mb-3 text-neutral-content/80 text-2xs sm:text-xs md:text-sm lg:text-base">
+          {{ 'cv.work.ibm.description.1' | translate }}
+          <span
+            class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-neutral-content">{{ 'cv.work.ibm.description.2' | translate }}</span>
+          {{ 'cv.work.ibm.description.3' | translate }}
+          <a class="link link-hover text-xs sm:text-sm md:text-base lg:text-lg font-bold text-neutral-content"
+             href="https://www.difesa.it/" target="_blank" rel="noopener noreferrer">
+            {{ 'cv.work.ibm.description.4' | translate }}
+          </a>
+        </p>
+        <ul
+          class="list-none pl-1 sm:pl-2 md:pl-3 lg:pl-4 space-y-0.5 md:space-y-1 text-neutral-content/80 text-2xs sm:text-xs md:text-sm lg:text-base">
           @for (i of [1, 2, 3, 4]; track i) {
             <li
-              class="before:content-['▸'] before:mr-5 before:text-primary before:text-xl">{{ ('cv.work.ibm.responsibility.' + i) | translate }}
+              class="before:content-['▸'] before:mr-1 sm:before:mr-2 md:before:mr-3 lg:before:mr-4  before:text-primary before:text-sm sm:before:text-base md:before:text-lg lg:before:text-xl">{{ ('cv.work.ibm.responsibility.' + i) | translate }}
             </li>
           }
         </ul>
+        <div
+          class="flex flex-wrap items-center justify-between mt-3 sm:mt-4 md:mt-5 lg:mt-6 px-4 sm:px-6 md:px-8 lg:px-10 py-1 sm:py-1.5 md:py-2 lg:py-3 rounded-lg bg-neutral-content">
+          <img src="assets/icons/java.svg" alt="Java" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/spring.svg" alt="Spring" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/javascript.svg" alt="Javascript"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/angularjs.svg" alt="AngularJS"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/html.svg" alt="HTML" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/oracledb.svg" alt="Oracle"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/jboss.svg" alt="JBoss" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/aws.svg" alt="AWS" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+        </div>
       </section>
 
       <section #section3 id="section3" class="min-h-full ">
-        <h2 class="text-xl font-bold mb-1">
+        <h2 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1">
           {{ 'cv.work.ppi.position' | translate }}
           <span class="text-primary">&#64; {{ 'cv.work.ppi.company' | translate }}</span>
         </h2>
-        <p class="mb-4 font-mono text-sm">{{ 'cv.work.ppi.period' | translate }}</p>
-        <p class="mb-3">{{ 'cv.work.ppi.description' | translate }}</p>
-        <ul class="list-none pl-4 space-y-2">
-          @for (i of [1, 2, 3, 4, 5, 6, 7]; track i) {
+        <p
+          class="mb-2 sm:mb-3 md:mb-4 font-mono text-3xs sm:text-2xs md:text-xs lg:text-sm">{{ 'cv.work.ppi.period' | translate }}</p>
+        <p class="mb-1 sm:mb-2 md:mb-3 text-neutral-content/80 text-2xs sm:text-xs md:text-sm lg:text-base">
+          {{ 'cv.work.ppi.description.1' | translate }}
+          <a class="link link-hover text-xs sm:text-sm md:text-base lg:text-lg font-bold text-neutral-content"
+             href="https://www.difesa.it/" target="_blank" rel="noopener noreferrer">
+            {{ 'cv.work.ppi.description.2' | translate }}
+          </a>
+          {{ 'cv.work.ppi.description.3' | translate }}
+        </p>
+        <ul
+          class="list-none pl-1 sm:pl-2 md:pl-3 lg:pl-4 space-y-0.25 md:space-y-0.5 lg:space-y-1 text-neutral-content/80 text-2xs sm:text-xs md:text-sm lg:text-base">
+          @for (i of [1, 2, 3, 4, 5, 6]; track i) {
             <li
-              class="before:content-['▸'] before:mr-5 before:text-primary before:text-xl">{{ ('cv.work.ppi.responsibility.' + i) | translate }}
+              class="before:content-['▸'] before:mr-1 sm:before:mr-2 md:before:mr-3 lg:before:mr-4 before:text-primary before:text-sm sm:before:text-base md:before:text-lg lg:before:text-xl">
+              {{ ('cv.work.ppi.responsibility.' + i) | translate }}
             </li>
           }
         </ul>
+        <div
+          class="flex flex-wrap items-center justify-between mt-3 sm:mt-4 md:mt-5 lg:mt-6 px-4 sm:px-6 md:px-8 lg:px-10 py-1 sm:py-1.5 md:py-2 lg:py-3 rounded-lg bg-neutral-content">
+          <img src="assets/icons/java.svg" alt="Java" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/spring.svg" alt="Spring" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/angular.svg" alt="Angular"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/corda.svg" alt="Corda R3" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/postgresql.svg" alt="Postgresql"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/docker.svg" alt="Docker" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/kubernetes.svg" alt="Kubernetes"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/helm.svg" alt="Helm charts"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/strapi.svg" alt="Strapi" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/onesignal.svg" alt="One signal"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+        </div>
       </section>
 
       <section #section2 id="section2" class="min-h-full">
-        <h2 class="text-xl font-bold mb-1">
+        <h2 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1">
           {{ 'cv.work.intern.position' | translate }}
           <span class="text-primary">&#64; {{ 'cv.work.intern.company' | translate }}</span>
         </h2>
-        <p class="mb-4 font-mono text-sm">{{ 'cv.work.intern.period' | translate }}</p>
-        <p class="mb-3">{{ 'cv.work.intern.description' | translate }}</p>
-        <ul class="list-none pl-4 space-y-2">
-          @for (i of [1, 2, 3, 4, 5]; track i) {
+        <p
+          class="mb-2 sm:mb-3 md:mb-4  font-mono  text-3xs sm:text-2xs md:text-xs lg:text-sm">{{ 'cv.work.intern.period' | translate }}</p>
+        <p class="mb-1 sm:mb-2 md:mb-3 text-neutral-content/80 text-2xs sm:text-xs md:text-sm lg:text-base">
+          <span
+            class="text-xs sm:text-sm md:text-base lg:text-lg font-bold text-neutral-content">{{ 'cv.work.intern.description.1' | translate }}</span>
+          {{ 'cv.work.intern.description.2' | translate }}
+        </p>
+        <ul
+          class="list-none pl-1 sm:pl-2 md:pl-3 lg:pl-4 space-y-0.25 md:space-y-0.5 lg:space-y-1 text-neutral-content/80 text-2xs sm:text-xs md:text-sm lg:text-base">
+          @for (i of [1, 2, 3, 4]; track i) {
             <li
-              class="before:content-['▸'] before:mr-5 before:text-primary before:text-xl">{{ ('cv.work.intern.responsibility.' + i) | translate }}
+              class="before:content-['▸'] before:mr-1 sm:before:mr-2 md:before:mr-3 lg:before:mr-4 before:text-primary before:text-sm sm:before:text-base md:before:text-lg lg:before:text-xl">{{ ('cv.work.intern.responsibility.' + i) | translate }}
             </li>
           }
         </ul>
+        <div
+          class="flex flex-wrap items-center justify-between mt-3 sm:mt-4 md:mt-5 lg:mt-6 px-4 sm:px-6 md:px-8 lg:px-10 py-1 sm:py-1.5 md:py-2 lg:py-3 rounded-lg bg-neutral-content">
+          <img src="assets/icons/java.svg" alt="Java" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/spring.svg" alt="Spring" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <div class="tooltip tooltip-bottom" data-tip="Thymeleaf">
+            <img src="assets/icons/thymeleaf.svg" alt="Thymeleaf"
+                 class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          </div>
+          <img src="assets/icons/javascript.svg" alt="Javascript"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/html.svg" alt="HTML" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <img src="assets/icons/css.svg" alt="CSS" class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <!--          <div class="tooltip tooltip-bottom" data-tip="Apache POI">-->
+          <img src="assets/icons/apachepoi.svg" alt="Apache POI"
+               class="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10"/>
+          <!--          </div>-->
+        </div>
       </section>
 
       <section #section1 id="section1" class="min-h-full">
-        <h2 class="text-xl font-bold mb-1">
+        <h2 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1">
           {{ 'cv.education.master.title' | translate }}
           <span class="text-primary">&#64; {{ 'cv.education.master.university' | translate }}</span>
         </h2>
-        <p class="mb-4 font-mono text-sm">{{ 'cv.education.master.period' | translate }}</p>
-        <div class="bg-base-100 p-4 rounded-xl shadow-md mb-6">
-          <p class="font-semibold mb-2">
-            📘 {{ 'cv.education.master.thesis.title' | translate }}
+        <p
+          class="mb-4 font-mono text-3xs sm:text-2xs md:text-xs lg:text-sm">{{ 'cv.education.master.period' | translate }}</p>
+        <div class="bg-base-100 p-2 sm:p-3 md:p-4 rounded-xl shadow-md mb-6">
+          <p class="font-semibold italic mb-2 text-2xs sm:text-xs md:text-sm lg:text-base">
+            📘 "{{ 'cv.education.master.thesis.title' | translate }}"
           </p>
-          <div class="flex flex-col gap-1 text-sm text-base-content/80">
+          <div class="flex flex-col gap-1 text-3xs sm:text-2xs md:text-xs lg:text-sm text-base-content/80">
             <span>
               <span
-                class="badge badge-outline badge-sm mr-2 font-mono">{{ 'cv.education.master.thesis.supervisor.desc' | translate }}</span>
+                class="badge badge-outline badge-sm mr-2 text-2xs sm:text-xs md:text-sm lg:text-base font-mono">{{ 'cv.education.master.thesis.supervisor.desc' | translate }}</span>
               {{ 'cv.education.master.thesis.supervisor.name' | translate }}
             </span>
             <span>
               <span
-                class="badge badge-outline badge-sm mr-2 font-mono">{{ 'cv.education.master.thesis.cosupervisor.desc' | translate }}</span>
+                class="badge badge-outline badge-sm mr-2 text-2xs sm:text-xs md:text-sm lg:text-base font-mono">{{ 'cv.education.master.thesis.cosupervisor.desc' | translate }}</span>
               {{ 'cv.education.master.thesis.cosupervisor.name' | translate }}
             </span>
           </div>
         </div>
         <div class="divider divider-secondary my-5 opacity-60"></div>
-        <h2 class="text-xl font-bold mb-1">
+        <h2 class="text-sm sm:text-base md:text-lg lg:text-xl font-bold mb-1">
           {{ 'cv.education.bachelor.title' | translate }}
           <span class="text-primary">&#64; {{ 'cv.education.bachelor.university' | translate }}</span>
         </h2>
         <p class="mb-4 font-mono text-sm">{{ 'cv.education.bachelor.period' | translate }}</p>
-        <div class="bg-base-100 p-4 rounded-xl shadow-md mb-6">
-          <p class="font-semibold mb-2">
-            📘 {{ 'cv.education.bachelor.thesis.title' | translate }}
+        <div class="bg-base-100 p-2 sm:p-3 md:p-4 rounded-xl shadow-md mb-6">
+          <p class="font-semibold italic mb-2 text-2xs sm:text-xs md:text-sm lg:text-base">
+            📘 "{{ 'cv.education.bachelor.thesis.title' | translate }}"
           </p>
-          <div class="flex flex-col gap-1 text-sm text-base-content/80">
+          <div class="flex flex-col gap-1 text-3xs sm:text-2xs md:text-xs lg:text-sm text-base-content/80">
             <span>
               <span
-                class="badge badge-outline badge-sm mr-2 font-mono">{{ 'cv.education.bachelor.thesis.supervisor.desc' | translate }}</span>
+                class="badge badge-outline badge-sm mr-2 text-2xs sm:text-xs md:text-sm lg:text-base font-mono">{{ 'cv.education.bachelor.thesis.supervisor.desc' | translate }}</span>
               {{ 'cv.education.bachelor.thesis.supervisor.name' | translate }}
             </span>
           </div>

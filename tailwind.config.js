@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontSize: {
+        '2xs': '0.625rem',
+        '3xs': '0.500rem',
+      },
       transitionDuration: {
         '1200': '1200ms',
       },

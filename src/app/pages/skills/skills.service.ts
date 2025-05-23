@@ -1,9 +1,6 @@
 import {computed, inject, Injectable, signal} from '@angular/core';
 import {SkillCard} from "./skill-card/skill-card";
 import {TranslateService} from "@ngx-translate/core";
-import {IconDefinition} from "@fortawesome/angular-fontawesome";
-import {faAngular, faDocker, faGit, faJava, faJs} from "@fortawesome/free-brands-svg-icons";
-import {faDatabase, faLeaf} from "@fortawesome/free-solid-svg-icons";
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +34,7 @@ export class SkillsService {
         category: card.category,
         description: card.description,
         experienceYears: card.experienceYears,
-        icon: this.getIcon(card.icon),
+        icon: 'assets/icons/' + card.icon + '.svg',
       }));
 
       this._allCards.set(cards);
@@ -49,37 +46,10 @@ export class SkillsService {
   }
 
   showLess() {
-    this._visibleCount.update(c => {
-      if (c % 6 == 0) {
-        return c - 6;
-      } else {
-        return c - c % 6;
-      }
-    });
+    this._visibleCount.set(6);
   }
 
   hasMore(): boolean {
     return this._visibleCount() < this._allCards().length;
-  }
-
-  getIcon(icon: string): IconDefinition {
-    if (icon === 'faJava') {
-      return faJava;
-    } else if (icon === 'faAngular') {
-      return faAngular;
-    } else if (icon === 'faDatabase') {
-      return faDatabase;
-    } else if (icon === 'faLeaf') {
-      return faLeaf;
-    } else if (icon === 'faDocker') {
-      return faDocker;
-    } else if (icon === 'faJs') {
-      return faJs;
-    } else if (icon === 'faGit') {
-      return faGit;
-    } else {
-      return faJava;
-    }
-
   }
 }

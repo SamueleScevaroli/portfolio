@@ -4,7 +4,7 @@
     "name": "Samuele Scevaroli.",
     "introduction": "I build and deploy web apps.",
     "description": "I'm a full stack developer, specialized in building and deploying exceptional web applications with modern frameworks.",
-    "button": "Check out my projects"
+    "button": "Download CV"
   },
   "about": {
     "section": {
@@ -25,9 +25,104 @@
       "12": "Successfully contributed to projects involving blockchain-based platforms and secure data management systems. Adept at problem-solving, collaborating in agile teams, and delivering robust, scalable solutions."
     }
   },
+  "cv": {
+    "section": {
+      "title": "CV",
+      "download": "Download CV"
+    },
+    "education": {
+      "title": "Education",
+      "bachelor": {
+        "title": "Applied Math - Modelling and Computational",
+        "university": "University of Verona",
+        "period": "10/2017 - 10/2020",
+        "thesis": {
+          "title": "Elliptic curves in cryptography",
+          "supervisor": {
+            "desc": "Supervisor",
+            "name": "Prof. Francesca Mantese"
+          }
+        }
+      },
+      "master": {
+        "title": "Cryptography - Stage oriented",
+        "university": "University of Trento",
+        "period": "10/2020 - 04/2023",
+        "thesis": {
+          "title": "An overview of isogeny-based cryptography: broken and unbroken protocols",
+          "supervisor": {
+            "desc": "Supervisor",
+            "name": "Prof. Nadir Murru"
+          },
+          "cosupervisor": {
+            "desc": "Co-Supervisor",
+            "name": "Dr. Marzio Mula"
+          }
+        }
+      }
+    },
+    "work": {
+      "intern": {
+        "title": "Internship",
+        "company": "PPI Italia s.r.l",
+        "period": "06/2022 - 11/2022",
+        "address": "Viale Famagosta, 75 - 20142 Milano (MI)",
+        "position": "Intern",
+        "description": {
+          "1": "B4T",
+          "2": "– A web application for managing employee expenses and generating payroll reports."
+        },
+        "responsibility": {
+          "1": "Designed and developed expense approval workflows",
+          "2": "Enabled PDF report generation and payroll extraction for HR use",
+          "3": "Built the backend using Spring Boot (MVC architecture)",
+          "4": "Developed the frontend using Thymeleaf templates, HTML, CSS, and Javascript"
+        }
+      },
+      "ppi": {
+        "title": "PPI",
+        "company": "PPI Italia s.r.l",
+        "period": "04/2023 - 05/2024",
+        "address": "Viale Famagosta, 75 - 20142 Milano (MI)",
+        "position": "Programmer Analyst",
+        "description": {
+          "1": "Development of ",
+          "2": "HVB",
+          "3": "a platform for insurance data exchange, powered by a private DLT (Corda R3)."
+        },
+        "responsibility": {
+          "1": "Developed an NMS (Network Mapping Service) to manage Corda nodes",
+          "2": "Deployed the full Corda network to a Kubernetes cluster using Helm Charts",
+          "3": "Maintained the platform: fixed bugs, implemented new features",
+          "4": "Integrated a CMS using Strapi",
+          "5": "Developed unit and integration tests for Spring Boot and Angular applications",
+          "6": "Integrated web/email notifications using OneSignal"
+        }
+      },
+      "ibm": {
+        "title": "IBM",
+        "company": "IBM CIC s.r.l",
+        "period": "05/2024 - Present",
+        "address": "Viale San Bovio, 3 - 20054 Segrate (MI)",
+        "position": "Practitioner - Application Developer-Cloud Fullstack",
+        "description": {
+          "1": "Refactoring and feature development of",
+          "2": "CMO (Commissione Medico Ospedaliera)",
+          "3": "application, in collaboration with the",
+          "4": "Italian Ministry of Defense."
+        },
+        "responsibility": {
+          "1": "Aligned local environment with the production database and infrastructure",
+          "2": "Conducted functional and design analysis for new features development",
+          "3": "Implemented new features and fixed bugs",
+          "4": "Maintenance and management of the application"
+        }
+      }
+    }
+  },
   "projects": {
     "section": {
-      "title": "Projects",
+      "title": "My Projects",
       "showMore": "Show More",
       "showLess": "Show Less",
       "expand": "Expand",
@@ -68,136 +163,168 @@
         "category": "Backend",
         "description": "OOP, Spring Boot, REST APIs",
         "experienceYears": "5",
-        "icon": "faJava"
+        "icon": "java"
       },
       "2": {
         "name": "Angular",
         "description": "PA, RxJS, Forms, Material",
         "experienceYears": "4",
         "category": "Frontend",
-        "icon": "faAngular"
+        "icon": "angular"
       },
       "3": {
         "name": "PostgreSQL",
         "description": "Complex queries, optimization, indexes",
         "experienceYears": "2",
         "category": "Database",
-        "icon": "faDatabase"
+        "icon": "postgresql"
       },
       "4": {
         "name": "Spring",
         "description": "Spring Boot, Security, JPA",
         "experienceYears": "4",
         "category": "Backend",
-        "icon": "faLeaf"
+        "icon": "spring"
       },
       "5": {
         "name": "Docker",
-        "description": "Containers, volumes, Docker Compose",
+        "description": "Docker Compose, Buildpacks, Jib",
         "experienceYears": "3",
         "category": "DevOps",
-        "icon": "faDocker"
+        "icon": "docker"
       },
       "6": {
         "name": "TypeScript",
         "description": "Strict types, interfaces, Angular",
         "experienceYears": "3",
         "category": "Frontend",
-        "icon": "faJs"
+        "icon": "typescript"
       },
       "7": {
         "name": "Git",
         "description": "Branching, merging, PRs",
         "experienceYears": "4",
         "category": "Tools",
-        "icon": "faGit"
-      }
-    }
-  },
-  "cv": {
-    "section": {
-      "title": "CV",
-      "download": {
-        "en": "Download CV",
-        "it": "Download CV it"
-      }
-    },
-    "education": {
-      "title": "Education",
-      "bachelor": {
-        "title": "Applied Math - Modelling and Computational",
-        "university": "University of Verona",
-        "period": "10/2017 - 10/2020",
-        "thesis": {
-          "title": "Elliptic curves in cryptography",
-          "supervisor": {
-            "desc": "Supervisor",
-            "name": "Prof. Francesca Mantese"
-          }
-        }
+        "icon": "git"
       },
-      "master": {
-        "title": "Cryptography - Stage oriented",
-        "university": "University of Trento",
-        "period": "10/2020 - 04/2023",
-        "thesis": {
-          "title": "An overview of isogeny-based cryptography: broken and unbroken protocols",
-          "supervisor": {
-            "desc": "Supervisor",
-            "name": "Prof. Nadir Murru"
-          },
-          "cosupervisor": {
-            "desc": "Co-Supervisor",
-            "name": "Dr. Marzio Mula"
-          }
-        }
-      }
-    },
-    "work": {
-      "intern": {
-        "title": "Internship",
-        "company": "PPI Italia s.r.l",
-        "period": "06/2022 - 11/2022",
-        "address": "Viale Famagosta, 75 - 20142 Milano (MI)",
-        "position": "Intern",
-        "description": "B4T – A web application for managing employee expenses and generating payroll reports.",
-        "responsibility": {
-          "1": "Designed and developed expense approval workflows",
-          "2": "Enabled PDF report generation and payroll extraction for HR use",
-          "3": "Built the backend using Spring Boot (MVC architecture with Thymeleaf templates)",
-          "4": "Developed the frontend using HTML, CSS, and Javascript"
-        }
+      "8": {
+        "name": "GitLab",
+        "description": "CI/CD, GitLab Runner",
+        "experienceYears": "2",
+        "category": "Tools",
+        "icon": "gitlab"
       },
-      "ppi": {
-        "title": "PPI",
-        "company": "PPI Italia s.r.l",
-        "period": "04/2023 - 05/2024",
-        "address": "Viale Famagosta, 75 - 20142 Milano (MI)",
-        "position": "Programmer Analyst",
-        "description": "Development of a platform for insurance data exchange, powered by a private DLT (Corda).",
-        "responsibility": {
-          "1": "Developed an NMS (Network Mapping Service) to manage Corda nodes",
-          "2": "Deployed the full Corda network to a Kubernetes cluster using Helm Charts",
-          "3": "Built a migration service to move data from an immutable legacy database to Corda vault storages",
-          "4": "Maintained the platform: fixed bugs, implemented new features",
-          "5": "Integrated a CMS using Strapi",
-          "6": "Developed unit and integration tests for Spring Boot and Angular applications",
-          "7": "Integrated web/email notifications using OneSignal"
-        }
+      "9": {
+        "name": "GitHub",
+        "description": "GitHub Actions, GitHub Pages",
+        "experienceYears": "2",
+        "category": "Tools",
+        "icon": "github"
       },
-      "ibm": {
-        "title": "IBM",
-        "company": "IBM CIC s.r.l",
-        "period": "05/2024 - Present",
-        "address": "Viale San Bovio, 3 - 20054 Segrate (MI)",
-        "position": "Practitioner - Application Developer-Cloud Fullstack",
-        "description": "Refactoring and feature development for the CMO (Commissione Medico Ospedaliera) platform, in collaboration with the Italian Ministry of Defense.",
-        "responsibility": {
-          "1": "Aligned local environment with the production database and infrastructure",
-          "2": "Conducted functional and design analysis for new feature development",
-          "3": "Implemented new features using Java 8, Spring, and AngularJS",
-          "4": "Maintenance and management of the application"
-        }
+      "10": {
+        "name": "AWS",
+        "description": "Git Commit, EC2, S3, Lambda",
+        "experienceYears": "2",
+        "category": "Cloud",
+        "icon": "aws"
+      },
+      "11": {
+        "name": "Corda R3",
+        "description": "Workflows, Contracts, Cordapps",
+        "experienceYears": "1",
+        "category": "Blockchain",
+        "icon": "corda"
+      },
+      "12": {
+        "name": "CSS",
+        "description": "TailwindCSS, DaisyUI, Bootstrap",
+        "experienceYears": "5",
+        "category": "Frontend",
+        "icon": "css"
+      },
+      "13": {
+        "name": "HTML",
+        "description": "Markup language, web page structure",
+        "experienceYears": "5",
+        "category": "Frontend",
+        "icon": "html"
+      },
+      "14": {
+        "name": "Helm Charts",
+        "description": "Kubernetes, Helm",
+        "experienceYears": "2",
+        "category": "DevOps",
+        "icon": "helm"
+      },
+      "15": {
+        "name": "Javascript",
+        "description": "ES6, RxJS, Angular",
+        "experienceYears": "3",
+        "category": "Frontend",
+        "icon": "javascript"
+      },
+      "16": {
+        "name": "JBoss",
+        "description": "JBoss EAP, Application Server",
+        "experienceYears": "1",
+        "category": "Tools",
+        "icon": "jboss"
+      },
+      "17": {
+        "name": "Kubernetes",
+        "description": "Pods, Services, Deployments, Ingress",
+        "experienceYears": "2",
+        "category": "DevOps",
+        "icon": "kubernetes"
+      },
+      "18": {
+        "name": "OneSignal",
+        "description": "Web, email and sms notifications",
+        "experienceYears": "1",
+        "category": "Tools",
+        "icon": "onesignal"
+      },
+      "19": {
+        "name": "OpenApi",
+        "description": "Swagger, Postman, API documentation",
+        "experienceYears": "1",
+        "category": "Tools",
+        "icon": "openapi"
+      },
+      "20": {
+        "name": "Oracle DB",
+        "description": "Oracle, PL/SQL, ETL, TDE",
+        "experienceYears": "1",
+        "category": "Database",
+        "icon": "oracledb"
+      },
+      "21": {
+        "name": "Strapi",
+        "description": "Headless CMS, REST APIs",
+        "experienceYears": "1",
+        "category": "CMS",
+        "icon": "strapi"
+      },
+      "22": {
+        "name": "Tailwind CSS",
+        "description": "TailwindCSS, DaisyUI, PostCSS",
+        "experienceYears": "1",
+        "category": "Frontend",
+        "icon": "tailwind-css"
+      },
+      "23": {
+        "name": "Keycloak",
+        "description": "OIDC, SAML, SSO",
+        "experienceYears": "2",
+        "category": "Authentication",
+        "icon": "keycloak"
+      },
+      "24": {
+        "name": "Thymeleaf",
+        "description": "Thymeleaf, HTML templates",
+        "experienceYears": "1",
+        "category": "Frontend",
+        "icon": "thymeleaf"
       }
     }
   }

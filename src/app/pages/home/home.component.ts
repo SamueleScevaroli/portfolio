@@ -13,4 +13,9 @@ import {NgStyle} from "@angular/common";
 })
 export class HomeComponent {
 
+  animationDone = false;
+
+  stopAnimation() {
+    this.animationDone = true;
+  }
 }

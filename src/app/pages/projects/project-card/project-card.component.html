@@ -1,24 +1,25 @@
 <div class="card bg-neutral/70 h-full shadow-sm transition-all duration-500">
   <div class="card-body">
     <div class="flex justify-between text-lg">
-      <a class="cursor-pointer text-2xl">
-        <fa-icon [icon]="['far', 'folder']" class="social-icon"></fa-icon>
+      <a
+        class="cursor-pointer text-2xl text-neutral-content/80 hover:text-primary/70 transition-transform duration-300 hover:scale-125">
+        <fa-icon [icon]="['far', 'folder']"></fa-icon>
       </a>
       <div class="flex gap-4">
-        <a class="cursor-pointer tooltip tooltip-accent" data-tip="Github" href="https://github.com/SamueleScevaroli"
-           target="_blank" rel="noopener noreferrer">
-          <fa-icon [icon]="['fab', 'github']" class="social-icon"></fa-icon>
+        <a
+          class="cursor-pointer transition-transform duration-300 hover:scale-125 text-neutral-content/80 hover:text-primary/70"
+          href="https://github.com/SamueleScevaroli"
+          target="_blank" rel="noopener noreferrer">
+          <fa-icon [icon]="['fab', 'github']"></fa-icon>
         </a>
-        <a class="cursor-pointer tooltip tooltip-accent"
-           [attr.data-tip]="isExpanded() ?('projects.section.collapse' | translate) : ('projects.section.expand' | translate)"
-           (click)="toggleExpand()">
-          <fa-icon [icon]="isExpanded() ? ['fas', 'compress'] : ['fas', 'expand']" class="social-icon"></fa-icon>
-        </a>
+        <!--        <fa-icon [icon]="isExpanded() ? ['fas', 'compress'] : ['fas', 'expand']"-->
+        <!--                 (click)="toggleExpand()"-->
+        <!--                 class="social-icon cursor-pointer text-neutral-content/80 hover:text-primary/70 transition-transform duration-300 hover:scale-125"></fa-icon>-->
       </div>
     </div>
 
     <h2 class="card-title">{{ title() }}</h2>
-    <p class="mb-3">{{ description() }}</p>
+    <p class="mb-3 text-neutral-content/80">{{ description() }}</p>
 
     <div class="card-actions">
       @for (badge of badges(); track badge) {
