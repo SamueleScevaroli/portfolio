@@ -89,11 +89,11 @@
           "3": "una piattaforma per lo scambio di dati assicurativi, basata su una DLT privata (Corda R3)."
         },
         "responsibility": {
-          "1": "Sviluppo di un NMS (Network Mapping Service) per la gestione dei nodi Corda",
-          "2": "Deployment dell'intera rete Corda su un cluster Kubernetes utilizzando Helm Charts",
-          "3": "Manutenzione della piattaforma: correzione bug, implementazione nuove funzionalità",
+          "1": "Sviluppata Network Mapping Service per la gestione dei nodi Corda",
+          "2": "Deployment della rete Corda su Kubernetes utilizzando Helm Charts",
+          "3": "Manutenzione della piattaforma: bug fixing e nuove funzionalità",
           "4": "Integrazione di un CMS utilizzando Strapi",
-          "5": "Sviluppo di test unitari e di integrazione per applicazioni Spring Boot e Angular",
+          "5": "Test unitari e di integrazione per Spring Boot e Angular",
           "6": "Integrazione di notifiche web/email utilizzando OneSignal"
         }
       },

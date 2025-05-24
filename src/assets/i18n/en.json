@@ -91,11 +91,11 @@
           "3": "a platform for insurance data exchange, powered by a private DLT (Corda R3)."
         },
         "responsibility": {
-          "1": "Developed an NMS (Network Mapping Service) to manage Corda nodes",
-          "2": "Deployed the full Corda network to a Kubernetes cluster using Helm Charts",
+          "1": "Developed a Network Mapping Service to manage Corda nodes",
+          "2": "Deployed the Corda network to Kubernetes using Helm Charts",
           "3": "Maintained the platform: fixed bugs, implemented new features",
           "4": "Integrated a CMS using Strapi",
-          "5": "Developed unit and integration tests for Spring Boot and Angular applications",
+          "5": "Unit and integration tests for Spring Boot and Angular apps",
           "6": "Integrated web/email notifications using OneSignal"
         }
       },
