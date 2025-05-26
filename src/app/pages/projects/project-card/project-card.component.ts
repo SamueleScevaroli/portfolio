@@ -1,13 +1,11 @@
 import {Component, EventEmitter, input, Output} from '@angular/core';
 import {FaIconComponent} from "@fortawesome/angular-fontawesome";
-import {TranslatePipe} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-project-card',
   standalone: true,
   imports: [
-    FaIconComponent,
-    TranslatePipe
+    FaIconComponent
   ],
   templateUrl: './project-card.component.html',
 })

@@ -9,10 +9,11 @@
           <fa-icon [icon]="['fas', 'bars']" class="swap-off"></fa-icon>
           <fa-icon [icon]="['fas', 'close']" class="swap-on"></fa-icon>
         </label>
-        <ul tabindex="0" class="menu menu-sm bg-base-100 dropdown-content mt-3 z-10 p-2 shadow rounded-box w-60">
+        <ul tabindex="0"
+            class="menu menu-sm bg-base-100 dropdown-content mt-3 z-10 p-2 shadow rounded-box w-40 sm:w-50 md:w-60">
           @for (item of navItems; track $index) {
             <li>
-              <a class="font-mono text-base" (click)="scrollToSection(item.section)">
+              <a class="font-mono text-2xs xs:text-xs sm:text-sm md:text-base" (click)="scrollToSection(item.section)">
                 <span class="text-primary">0{{ $index + 1 }}.</span>
                 <span class="text-neutral-content/60 hover:text-neutral-content">
                   {{ item.label | translate }}
@@ -28,19 +29,21 @@
       </a>
     </div>
 
-    <div class="navbar-end hidden lg:flex w-full justify-end items-center space-x-4">
+    <div class="hidden lg:flex w-full justify-end items-center space-x-4">
       <ul class="menu menu-horizontal space-x-4">
         @for (item of navItems; track $index) {
           <li class="opacity-0 animate-slide-down" [ngStyle]="{'animation-delay': ($index * 0.15) + 's'}">
             <a class="font-mono" (click)="scrollToSection(item.section)">
               <span class="text-primary">0{{ $index + 1 }}.</span>
               <span class="text-neutral-content/60 hover:text-neutral-content">
-                  {{ item.label | translate }}
-                </span>
+                      {{ item.label | translate }}
+                    </span>
             </a>
           </li>
         }
       </ul>
+    </div>
+    <div class="flex w-full lg:w-auto justify-end space-x-4">
       <label class="swap swap-rotate opacity-0 animate-slide-down" [ngStyle]="{'animation-delay': '0.6s'}">
         <input type="checkbox" [checked]="currentTheme() === 'pastel'" (change)="toggleTheme($event)"/>
         <fa-icon [icon]="['fas', 'sun']" class="swap-off"></fa-icon>

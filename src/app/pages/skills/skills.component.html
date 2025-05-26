@@ -1,10 +1,11 @@
 <div class="flex flex-col items-center py-20">
-  <div class="flex flex-grow font-bold text-left items-center w-2/3 pl-6">
-    <span class="font-mono text-xl text-primary mr-5">04.</span>
-    <span class="text-2xl whitespace-nowrap"> {{ 'skills.section.title' | translate }}</span>
+  <div class="flex flex-grow font-bold text-left items-center w-5/6 md:w-2/3 pl-6">
+    <span class="font-mono text-sm sm:text-base md:text-lg lg:text-xl text-primary mr-5">04.</span>
+    <span
+      class="text-base sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap"> {{ 'skills.section.title' | translate }}</span>
     <div class="divider divider-secondary opacity-60 w-full px-5"></div>
   </div>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4 xl:gap-6 p-3 sm:p-4 md:p-5 lg:p-6">
     @for (skill of skills(); track $index) {
       <div class="group [perspective:1000px]">
         <div
@@ -18,12 +19,12 @@
     }
   </div>
   @if (hasMore) {
-    <button class="btn btn-outline btn-primary font-mono mt-6"
+    <button class="btn btn-outline btn-primary font-mono mt-3 sm:mt-4 md:mt-5 xl:mt-6"
             (click)="showMore()">
       {{ 'projects.section.showMore' | translate }}
     </button>
   } @else if (!hasMore && skills().length > 6) {
-    <button class="btn btn-outline btn-primary font-mono mt-6"
+    <button class="btn btn-outline btn-primary font-mono mt-3 sm:mt-4 md:mt-5 xl:mt-6"
             (click)="showLess()">
       {{ 'projects.section.showLess' | translate }}
     </button>
