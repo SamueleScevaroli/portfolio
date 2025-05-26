@@ -5,7 +5,7 @@
       class="text-base sm:text-lg md:text-xl lg:text-2xl whitespace-nowrap"> {{ 'skills.section.title' | translate }}</span>
     <div class="divider divider-secondary opacity-60 w-full px-5"></div>
   </div>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 sm:gap-3 md:gap-4 xl:gap-6 p-3 sm:p-4 md:p-5 lg:p-6">
+  <div class="grid grid-cols-2 xs:grid-cols-3 gap-2 sm:gap-3 md:gap-4 xl:gap-6 p-3 sm:p-4 md:p-5 lg:p-6">
     @for (skill of skills(); track $index) {
       <div class="group [perspective:1000px]">
         <div

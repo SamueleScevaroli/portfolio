@@ -1,5 +1,4 @@
 import {Component, input} from '@angular/core';
-import {FaIconComponent} from "@fortawesome/angular-fontawesome";
 import {TranslatePipe} from "@ngx-translate/core";
 import {NgClass} from "@angular/common";
 import {SkillCard} from "./skill-card";
@@ -8,7 +7,6 @@ import {SkillCard} from "./skill-card";
   selector: 'app-skill-card',
   standalone: true,
   imports: [
-    FaIconComponent,
     TranslatePipe,
     NgClass
   ],
