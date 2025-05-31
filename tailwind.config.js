@@ -19,7 +19,12 @@ module.exports = {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["light", "dark", "pastel", "abyss", "dim"],
+    themes: ["light", "dark", {
+      pastel: {
+        ...require("daisyui/src/theming/themes")["pastel"],
+        "primary": "#A0E88E",
+      }
+    }, "abyss", "dim"],
   },
 }
 

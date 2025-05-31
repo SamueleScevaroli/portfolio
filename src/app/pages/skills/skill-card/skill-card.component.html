@@ -19,13 +19,13 @@
                 : {{ card().experienceYears }} {{ 'skills.section.years' | translate }}</span>
       </label>
       <div class="flex space-x-1">
-        @for (i of [1, 2, 3, 4, 5]; track i) {
+        @for (i of [1, 2, 3, 4]; track i) {
           <div
             class="h-2 flex-1 rounded"
             [ngClass]="{
-                    'bg-green-500': card().experienceYears >= i && card().experienceYears >= 5,
-                    'bg-yellow-500': card().experienceYears >= i && card().experienceYears >= 3 && card().experienceYears < 5,
-                    'bg-red-500': card().experienceYears >= i && card().experienceYears < 3,
+                    'bg-green-500': card().experienceYears >= i && card().experienceYears >= 3,
+                    'bg-yellow-500': card().experienceYears >= i && card().experienceYears >= 2 && card().experienceYears < 3,
+                    'bg-red-500': card().experienceYears >= i && card().experienceYears < 2,
                     'bg-base-300': card().experienceYears < i
                   }">
           </div>

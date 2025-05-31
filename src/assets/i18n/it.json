@@ -154,34 +154,34 @@
       "1": {
         "name": "Java",
         "category": "Backend",
-        "description": "OOP, Spring Boot, REST APIs",
-        "experienceYears": "5",
+        "description": "Spring Boot, REST APIs, Threads",
+        "experienceYears": "4",
         "icon": "java"
       },
       "2": {
         "name": "Angular",
-        "description": "PA, RxJS, Forms, Material",
-        "experienceYears": "4",
+        "description": "SPA, RxJS, Forms, Material",
+        "experienceYears": "3",
         "category": "Frontend",
         "icon": "angular"
       },
       "3": {
         "name": "PostgreSQL",
         "description": "Complex queries, optimization, indexes",
-        "experienceYears": "2",
+        "experienceYears": "3",
         "category": "Database",
         "icon": "postgresql"
       },
       "4": {
         "name": "Spring",
         "description": "Spring Boot, Security, JPA",
-        "experienceYears": "4",
+        "experienceYears": "3",
         "category": "Backend",
         "icon": "spring"
       },
       "5": {
         "name": "Docker",
-        "description": "Containers, volumes, Docker Compose",
+        "description": "Docker Compose, Buildpacks, Jib",
         "experienceYears": "3",
         "category": "DevOps",
         "icon": "docker"
@@ -194,123 +194,123 @@
         "icon": "typescript"
       },
       "7": {
+        "name": "CSS",
+        "description": "TailwindCSS, DaisyUI, Bootstrap",
+        "experienceYears": "4",
+        "category": "Frontend",
+        "icon": "css"
+      },
+      "8": {
+        "name": "HTML",
+        "description": "Markup language, web page structure",
+        "experienceYears": "4",
+        "category": "Frontend",
+        "icon": "html"
+      },
+      "9": {
         "name": "Git",
         "description": "Branching, merging, PRs",
         "experienceYears": "4",
         "category": "Tools",
         "icon": "git"
       },
-      "8": {
+      "10": {
         "name": "GitLab",
         "description": "CI/CD, GitLab Runner",
         "experienceYears": "2",
         "category": "Tools",
         "icon": "gitlab"
       },
-      "9": {
+      "11": {
         "name": "GitHub",
         "description": "GitHub Actions, GitHub Pages",
         "experienceYears": "2",
         "category": "Tools",
         "icon": "github"
       },
-      "10": {
+      "12": {
         "name": "AWS",
         "description": "Git Commit, EC2, S3, Lambda",
         "experienceYears": "2",
         "category": "Cloud",
         "icon": "aws"
       },
-      "11": {
-        "name": "Corda R3",
-        "description": "Workflows, Contracts, Cordapps",
-        "experienceYears": "1",
-        "category": "Blockchain",
-        "icon": "corda"
-      },
-      "12": {
-        "name": "CSS",
-        "description": "TailwindCSS, DaisyUI, Bootstrap",
-        "experienceYears": "5",
-        "category": "Frontend",
-        "icon": "css"
-      },
       "13": {
-        "name": "HTML",
-        "description": "Markup language, web page structure",
-        "experienceYears": "5",
-        "category": "Frontend",
-        "icon": "html"
+        "name": "Spring Cloud",
+        "description": "Eureka, Actuator, Config",
+        "experienceYears": "1",
+        "category": "Cloud",
+        "icon": "spring"
       },
       "14": {
-        "name": "Helm Charts",
-        "description": "Kubernetes, Helm",
-        "experienceYears": "2",
-        "category": "CI/CD",
-        "icon": "helm"
-      },
-      "15": {
-        "name": "Javascript",
-        "description": "ES6, RxJS, Angular",
-        "experienceYears": "3",
-        "category": "Frontend",
-        "icon": "javascript"
-      },
-      "16": {
-        "name": "JBoss",
-        "description": "JBoss EAP, Application Server",
-        "experienceYears": "1",
-        "category": "Tools",
-        "icon": "jboss"
-      },
-      "17": {
         "name": "Kubernetes",
         "description": "Pods, Services, Deployments, Ingress",
         "experienceYears": "2",
         "category": "DevOps",
         "icon": "kubernetes"
       },
+      "15": {
+        "name": "Keycloak",
+        "description": "OIDC, SAML, SSO",
+        "experienceYears": "2",
+        "category": "Authentication",
+        "icon": "keycloak"
+      },
+      "16": {
+        "name": "Helm Charts",
+        "description": "Kubernetes, Helm",
+        "experienceYears": "1",
+        "category": "DevOps",
+        "icon": "helm"
+      },
+      "17": {
+        "name": "Corda R3",
+        "description": "Workflows, Contracts, Cordapps",
+        "experienceYears": "1",
+        "category": "Blockchain",
+        "icon": "corda"
+      },
       "18": {
+        "name": "Javascript",
+        "description": "ES6, RxJS, Angular",
+        "experienceYears": "2",
+        "category": "Frontend",
+        "icon": "javascript"
+      },
+      "19": {
+        "name": "JBoss",
+        "description": "JBoss EAP, Application Server",
+        "experienceYears": "1",
+        "category": "Tools",
+        "icon": "jboss"
+      },
+      "20": {
         "name": "OneSignal",
         "description": "Web, email and sms notifications",
         "experienceYears": "1",
         "category": "Tools",
         "icon": "onesignal"
       },
-      "19": {
+      "21": {
         "name": "OpenApi",
         "description": "Swagger, Postman, API documentation",
         "experienceYears": "1",
         "category": "Tools",
         "icon": "openapi"
       },
-      "20": {
+      "22": {
         "name": "Oracle DB",
         "description": "Oracle, PL/SQL, ETL, TDE",
         "experienceYears": "1",
         "category": "Database",
         "icon": "oracledb"
       },
-      "21": {
+      "23": {
         "name": "Strapi",
         "description": "Headless CMS, REST APIs",
         "experienceYears": "1",
         "category": "CMS",
         "icon": "strapi"
-      },
-      "22": {
-        "name": "Tailwind CSS",
-        "description": "TailwindCSS, DaisyUI, PostCSS",
-        "experienceYears": "1",
-        "category": "Frontend",
-        "icon": "tailwind-css"
-      },
-      "23": {
-        "name": "Keycloak",
-        "description": "OIDC, SAML, SSO",
-        "experienceYears": "2",
-        "category": "Authentication",
-        "icon": "keycloak"
       },
       "24": {
         "name": "Thymeleaf",
@@ -318,6 +318,13 @@
         "experienceYears": "1",
         "category": "Frontend",
         "icon": "thymeleaf"
+      },
+      "25": {
+        "name": "Grafana",
+        "description": "Monitoring, dashboards",
+        "experienceYears": "1",
+        "category": "Monitoring",
+        "icon": "grafana"
       }
     }
   }
